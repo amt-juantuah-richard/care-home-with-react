@@ -1,4 +1,4 @@
-import { ArrowDownward } from '@mui/icons-material';
+import { KeyboardArrowDownOutlined } from '@mui/icons-material';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -64,19 +64,19 @@ function Navbar() {
           <MenuBox>
             <MenuItem>
               <Para>Home</Para>
-              <ArrowDownward />
+              <KeyboardArrowDownOutlined />
             </MenuItem>
             <MenuItem>
               <Para>Home</Para>
-              <ArrowDownward />
+              <KeyboardArrowDownOutlined />
             </MenuItem>
             <MenuItem>
               <Para>Home</Para>
-              <ArrowDownward />
+              <KeyboardArrowDownOutlined />
             </MenuItem>
             <MenuItem>
               <Para>Home</Para>
-              <ArrowDownward />
+              <KeyboardArrowDownOutlined />
             </MenuItem>
           </MenuBox>
         </Right>
