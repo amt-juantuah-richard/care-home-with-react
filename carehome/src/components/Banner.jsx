@@ -1,3 +1,4 @@
+import { ArrowRightAltOutlined } from '@mui/icons-material';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,20 +22,58 @@ const BannerSection = styled.div`
 
 const ImageBox = styled.div`
     background-color: #fff;
-    background-image: url('../../public/assets/images/care_serve.jpg');
+    background-image: url('https://media.istockphoto.com/id/1387432227/photo/female-care-worker-in-uniform-bringing-meal-on-tray-to-senior-woman-sitting-in-lounge-at-home.jpg?b=1&s=170667a&w=0&k=20&c=uicB34oYDPLw2EYJ7kS3m3gWCnafkEvRLvXk-e8ZAdg=');
     background-size: cover;
     background-position: center;
     border-radius: 100px 0 100px 0;
     height: 100%;
     width: 100%;
+    position: relative;
+    transition: all 1200ms;
+    &: hover {
+        background-position: left;
+    }
 `;
+
+const Span = styled.span`
+    transition: margin 1300ms;
+    cursor: pointer;
+    &:hover {
+        color: red;
+    }
+`;
+
+const ImageSide = styled.div`
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0 20px 0 20px;
+    bottom: -15px;
+    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    &:hover ${Span}{
+        margin-right:10px;
+    }
+`;
+
+
 
 function Banner() {
   return (
     <Container>
         <BannerSection></BannerSection>
         <BannerSection>
-            <ImageBox />
+            <ImageBox>
+                <ImageSide>
+                    <Span>Go to Our Services</Span>
+                    <ArrowRightAltOutlined />
+                </ImageSide>
+            </ImageBox>
         </BannerSection>
     </Container>
   )
