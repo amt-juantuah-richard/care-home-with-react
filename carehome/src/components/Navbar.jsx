@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   height: 60px;
-  background-color: #ffffff;
+  background-color: #eaeaea;
   position: sticky;
   top: 0;
   z-index: 4;
@@ -18,13 +18,13 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
+  flex: 1.3;
   text-align: start;
 `;
 
 const Right = styled.div`
   height: 100%;
-  flex: 1;
+  flex: 0.7;
 `;
 
 const MenuBox = styled.div`
@@ -39,8 +39,11 @@ const MenuItem = styled.div`
   flex: 1;
   height: 100%;
   display: flex;
+  margin: 0 10px;
   align-items: center;
+  cursor: pointer;
   justify-content: center;
+  gap: 5px;
   transition: all 500ms;
   &:hover {
     background-color: #09f1c4;
@@ -49,6 +52,7 @@ const MenuItem = styled.div`
 
 const Logo = styled.h2`
   margin-left: 20px;
+  cursor: pointer;
 `;
 
 const Para = styled.span``;
@@ -64,18 +68,17 @@ function Navbar() {
           <MenuBox>
             <MenuItem>
               <Para>Home</Para>
+            </MenuItem>
+            <MenuItem>
+              <Para>About</Para>
               <KeyboardArrowDownOutlined />
             </MenuItem>
             <MenuItem>
-              <Para>Home</Para>
+              <Para>Services</Para>
               <KeyboardArrowDownOutlined />
             </MenuItem>
             <MenuItem>
-              <Para>Home</Para>
-              <KeyboardArrowDownOutlined />
-            </MenuItem>
-            <MenuItem>
-              <Para>Home</Para>
+              <Para>More</Para>
               <KeyboardArrowDownOutlined />
             </MenuItem>
           </MenuBox>
