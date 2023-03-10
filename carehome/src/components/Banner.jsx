@@ -61,12 +61,28 @@ const ImageSide = styled.div`
     }
 `;
 
+const WordBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+`;
+
+const HeadWord = styled.h1`
+    
+`;
+
 
 
 function Banner() {
+
   return (
     <Container>
-        <BannerSection></BannerSection>
+        <BannerSection>
+            <WordBox>
+                <HeadWord>Welcome</HeadWord>
+                <p>Culpa labore tempor est eiusmod labore aute proident. Ut amet officia officia est aute. Eu consectetur excepteur amet cillum id est. Adipisicing ex consectetur proident voluptate ad sit. Dolor duis id duis Lorem. Elit incididunt irure consectetur ipsum pariatur esse magna anim veniam. Id labore eiusmod exercitation aliqua laboris.Nostrud non pariatur consectetur quis id excepteur est magna ullamco laborum.</p>
+            </WordBox>
+        </BannerSection>
         <BannerSection>
             <ImageBox>
                 <ImageSide>
