@@ -121,6 +121,15 @@ const LogoDown = styled.div`
 
 const Para = styled.span``;
 
+const Tel = styled.a`
+  font-size: 12px;
+  color: aliceblue;
+  transition: all 100ms;
+  &:hover {
+    text-decoration: dashed;
+    font-size: 14px;
+  }
+`;
 
 function Navbar() {
   return (
@@ -131,7 +140,7 @@ function Navbar() {
             <Logo>Care Home</Logo>
             <LogoDown>
               <Phone />
-              03030303030303
+              <Tel href='tel:03030303030303'>03030303030303</Tel>
             </LogoDown>
           </LogoContain>
         </Left>
