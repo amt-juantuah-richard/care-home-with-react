@@ -5,6 +5,7 @@
   --color-blue: #939bf4;
   --color-btn-prim: #44cdef;
   --color-brown: #3c3c3c;
+  --color-bg: #eaeaea;
 }
 
 * {
@@ -15,7 +16,7 @@
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  background-color: #eaeaea;
+  background-color: var(--color-bg);
   width: 100vw;
   height: auto;
   overflow-x: hidden;

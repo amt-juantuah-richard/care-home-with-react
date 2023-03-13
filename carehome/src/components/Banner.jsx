@@ -25,7 +25,7 @@ const ImageSide = styled.div`
     transition: all 500ms;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
     -moz-box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
-    box-shadow: 10px 10px 5px 0px rgba(97,27,75,1)
+    box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
     &:hover ${Span}{
         margin-right:10px;
     }
