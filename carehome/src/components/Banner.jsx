@@ -48,7 +48,6 @@ const Container = styled.div`
 const BannerSection = styled.div`
     flex: 1;
     height: 100%;
-    padding: 0 25px;
     display: flex;
     align-items: center;
 `;
@@ -73,6 +72,7 @@ const WordBox = styled.div`
     flex-direction: column;
     color: aliceblue;
     gap: 50px;
+    padding-right: 25px;
 `;
 
 const HeadWord = styled.h1`

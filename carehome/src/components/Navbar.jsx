@@ -6,6 +6,7 @@ const Container = styled.div`
   height: 60px;
   background-color: #eaeaea;
   position: sticky;
+  padding: 0 50px;
   top: 0;
   z-index: 4;
 `;
@@ -71,7 +72,7 @@ const MenuItem = styled.div`
   width: 96px;
   height: 100%;
   display: flex;
-  margin: 0 10px;
+  margin-left: 10px;
   align-items: center;
   cursor: pointer;
   justify-content: center;

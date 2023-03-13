@@ -6,24 +6,26 @@ import SquareBox from './SquareBox';
 const Container = styled.div`
     height: auto;
     width: 100vw;
-    padding: 60px 0;
+    padding: 80px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
+    border-radius: 0 150px 0 150px;
+    background-color: var(--color-exlight-purple);
 `;
 
 const ReasonBox = styled.div`
-  width: 80%;
+  width: 100%;
   height: auto;
   min-height: 80vh;
-  background: red;
   display: flex;
   flex-flow: column;
   align-items: center;
 `;
 
-const HeadLine = styled.h1`
-  margin-bottom: 40px;
+const HeadLine = styled.h2`
+  margin-bottom: 60px;
 `;
 
 const Reasons = styled.div`
@@ -32,10 +34,10 @@ const Reasons = styled.div`
   flex-wrap: wrap;
   align-items: center;
   height: auto;
-  width: 80%;
-  background: green;
-  justify-content: center;
-  column-gap: 20px;
+  width: 100%;
+  padding: 0 50px;
+  justify-content: space-between;
+  // column-gap: 20px;
 `;
 
 // const ReasonItem = styled.div`

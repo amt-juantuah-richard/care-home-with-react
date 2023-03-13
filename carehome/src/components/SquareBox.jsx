@@ -22,15 +22,17 @@ const Rounded = styled.div`
 `;
 
 const Container = styled.div`
-    width: 270px;
-    height: 230px;
+    width: 320px;
+    height: 300px;
     display: flex;
-    padding: 5px;
+    flex-flow: column;
+    padding: 45px 5px 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     border-radius: 5px;
     margin-bottom: 50px;
+    background-color: var(--color-light-purple);
     transition: all 300ms;
     &:hover ${Rounded} {
       // border: 0;        
@@ -61,7 +63,7 @@ const Para = styled.p``;
 function SquareBox(props) {
   
   return (
-    <Container style={{backgroundColor: `${props.color || 'yellow'}`}}>
+    <Container>
       <Rounded><Stat>{props.stat}<sup>%</sup> </Stat></Rounded>
       <Para>{props.headline}</Para>
       <Buttom>Read More...</Buttom>

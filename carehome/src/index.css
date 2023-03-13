@@ -6,6 +6,12 @@
   --color-btn-prim: #44cdef;
   --color-brown: #3c3c3c;
   --color-bg: #eaeaea;
+  --color-exlight-purple: #611b4b1f;
+  --color-light-purple: #611b4b82;
+  --color-purple: #611b4b;
+  --color-green: #092830;
+  --color-light-green: #0928309c;
+  --color-exlight-green: #0928304f;
 }
 
 * {
