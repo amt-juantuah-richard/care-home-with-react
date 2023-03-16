@@ -1,3 +1,4 @@
+import { AssignmentTurnedInOutlined, TaskAltOutlined, VerifiedOutlined } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
 import SquareBox from './SquareBox';
@@ -6,7 +7,7 @@ import SquareBox from './SquareBox';
 const Container = styled.div`
     height: auto;
     width: 100vw;
-    padding: 80px 0;
+    padding: 80px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,14 +52,25 @@ const Reasons = styled.div`
 
 
 function Why() {
+
+  const checkOne = <AssignmentTurnedInOutlined />
+  const checkTwo = <VerifiedOutlined />
+  const checkThree = <TaskAltOutlined />
+  
+  const headline = 'Eu sunt laboris esse ex.'
+  const point = [
+    'Ex ipsum dolore laboris pariatur cillum reprehenderit amet.',
+    'Ex ipsum dolore laboris pariatur cillum reprehenderit amet.',
+    'Ex ipsum dolore laboris pariatur cillum reprehenderit amet.'
+  ]
   return (
     <Container>
       <ReasonBox>
         <HeadLine>Why <b>Choose</b> Us?</HeadLine>
         <Reasons>
-          <SquareBox stat="78" headline="Won hh awagggggggggggggggggrds" color="grey" />
-          <SquareBox stat="72" headline="Won 78 awards" color="pink" />
-          <SquareBox stat="90" headline="Won awards" color="purple" />
+          <SquareBox stat={checkOne} headline={headline} point={point} />
+          <SquareBox stat={checkTwo} headline={headline} point={point} />
+          <SquareBox stat={checkThree} headline={headline} point={point} />
         </Reasons>
       </ReasonBox>
     </Container>

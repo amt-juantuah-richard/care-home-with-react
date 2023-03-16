@@ -2,9 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Stat = styled.h3`
+const Stat = styled.h1`
   transition: all 500ms;
-  color: var(--color-bg);
+  color: gold;
+  & svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
 `;
 
 const Rounded = styled.div`
@@ -15,7 +19,7 @@ const Rounded = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  background-color: blue;
+  background-color: var(--color-purple);
   border: 5px solid var(--color-bg);
   top: -40px;
   transition: all 300ms;
@@ -31,15 +35,16 @@ const Container = styled.div`
     justify-content: space-between;
     position: relative;
     border-radius: 5px;
+    box-shadow: 10px 10px 5px 0px var(--color-light-green);
     margin-bottom: 50px;
-    background-color: var(--color-light-purple);
+    background-color: var(--color-bg);
     transition: all 300ms;
     &:hover ${Rounded} {
       // border: 0;        
       box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     };
     &:hover {
-      border-bottom: 6px solid yellow;
+      border-bottom: 6px solid gold;
     }
 `;
 
@@ -49,7 +54,7 @@ const Buttom = styled.button`
     border-radius: 5px;
     border: none;
     outline: none;
-    background-color: blue;
+    background-color: var(--color-purple);
     color: var(--color-bg);
     &:hover {
       opacity: 0.8;
@@ -57,15 +62,27 @@ const Buttom = styled.button`
 `;
 
 
-const Para = styled.p``;
+const List = styled.ul`
+    list-style: none;
+    margin: 0 15px;
+`;
+
+const ListItem = styled.li`
+    margin-top: 10px;
+`
+
+const Headline = styled.h3``;
 
 
 function SquareBox(props) {
-  
+  const stat = props.stat ? props.stat : '100%';
   return (
     <Container>
-      <Rounded><Stat>{props.stat}<sup>%</sup> </Stat></Rounded>
-      <Para>{props.headline}</Para>
+      <Rounded><Stat>{stat}</Stat></Rounded>
+      <Headline>{props.headline}</Headline>
+      <List>
+      {props.point.map((item, index) => <ListItem key={index}>{item}</ListItem>)}
+      </List>
       <Buttom>Read More...</Buttom>
     </Container>
   )

@@ -7,15 +7,16 @@ const Span = styled.span`
     transition: margin 1300ms;
     cursor: pointer;
     &:hover {
-        color: red;
+        color: var(--color-purple);
+        font-weight: 800;
     }
 `;
 
 const ImageSide = styled.div`
-    width: 50%;
+    width: 200px;
     height: 100px;
     position: absolute;
-    background-color: #fff;
+    background-color: var(--color-bg);
     border-radius: 0 20px 0 20px;
     bottom: -15px;
     left: -15px;
@@ -86,14 +87,14 @@ const DownloadButtom = styled.button`
     border: none;
     outline: none;
     border-radius: 8px;
-    background-color: #611b4b;
+    background-color: var(--color-purple);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: aliceblue;
+    color: var(--color-bg);
     &:hover {
-        color: #611b4b;
-        background-color: aliceblue;
+        color: var(--color-purple);
+        background-color: var(--color-bg);
     }
 `;
 
