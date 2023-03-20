@@ -4,8 +4,8 @@
   --color-orange: #f1b604;
   --color-blue: #939bf4;
   --color-btn-prim: #44cdef;
-  --color-brown: #3c3c3c;
-  --color-bg: #eaeaea;
+  --color-brown: #19202d;
+  --color-bg: #f2f2f2;
   --color-exlight-purple: #611b4b1f;
   --color-light-purple: #611b4b82;
   --color-purple: #611b4b;
@@ -13,6 +13,7 @@
   --color-light-green: #0928309c;
   --color-exlight-green: #0928304f;
   --color-shadow-random: #dfe3e6;
+  
 }
 
 * {
@@ -27,6 +28,7 @@ body {
   width: 100vw;
   height: auto;
   overflow-x: hidden;
+  color: #000000b8;
 }
 
 button {

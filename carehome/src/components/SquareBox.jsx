@@ -6,8 +6,8 @@ const Stat = styled.h1`
   transition: all 500ms;
   color: gold;
   & svg {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.3em;
+    height: 1.3em;
   }
 `;
 
@@ -26,18 +26,18 @@ const Rounded = styled.div`
 `;
 
 const Container = styled.div`
-    width: 320px;
-    height: 300px;
+    width: 330px;
+    height: 350px;
     display: flex;
     flex-flow: column;
     padding: 45px 5px 20px;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    border-radius: 5px;
+    border-radius: 6px;
     box-shadow: 10px 10px 5px 0px var(--color-light-green);
     margin-bottom: 50px;
-    background-color: var(--color-bg);
+    background-color: #ffffff;
     transition: all 300ms;
     &:hover ${Rounded} {
       // border: 0;        
@@ -71,7 +71,12 @@ const ListItem = styled.li`
     margin-top: 10px;
 `
 
-const Headline = styled.h3``;
+const Headline = styled.h3`
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #19202d;
+`;
 
 
 function SquareBox(props) {

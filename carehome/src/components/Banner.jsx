@@ -1,7 +1,10 @@
 import { ArrowRightAltOutlined, PictureAsPdfOutlined } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { BannerImages } from './BannerImage';
+import { BannerImages } from './Data';
+import { Carousel } from 'grommet';
+import { Author, Box, Title, Words, WordBox } from './Feedback';
+import { Feedbacks } from './Data';
 
 const Span = styled.span`
     transition: margin 1300ms;
@@ -36,14 +39,10 @@ const ImageSide = styled.div`
 const Container = styled.div`
     width: 100vw;
     height: 90vh;
-    background-color: #092830;
     border-radius: 0 150px 0 150px;
     margin-top: 15px;
-    display: flex;
-    padding: 60px 50px;
-    &:hover ${ImageSide} {
-        box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-    }
+    padding-left: 50px;
+    // display: flex;
 `;
 
 const BannerSection = styled.div`
@@ -53,33 +52,35 @@ const BannerSection = styled.div`
     align-items: center;
 `;
 
-const ImageBox = styled.div`
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50px 0 50px 0;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transition: all 1200ms;
-    &: hover {
-        background-position: left;
-    }
-`;
+// const ImageBox = styled.div`
+//     background-color: #fff;
+//     background-size: cover;
+//     background-position: center;
+//     border-radius: 50px 0 50px 0;
+//     height: 100%;
+//     width: 100%;
+//     position: relative;
+//     transition: all 1200ms;
+//     &: hover {
+//         background-position: left;
+//     }
+// `;
 
 
-const WordBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
-    gap: 50px;
-    padding-right: 25px;
-`;
+// const WordBox = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     color: aliceblue;
+//     gap: 50px;
+//     padding-right: 25px;
+// `;
 
 const HeadWord = styled.h1`
 `;
 
-const Para = styled.p``;
+const Para = styled.p`
+    line-height: 28px;
+`;
 
 const DownloadButtom = styled.button`
     height: 80px;
@@ -98,6 +99,24 @@ const DownloadButtom = styled.button`
     }
 `;
 
+const ContentBox = styled.div`
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    border-radius: 0 150px 0 150px;
+    background-color: var(--color-exlight-purple);
+`;
+
+const ImageBox = styled.div`
+    flex: 1;
+    background-position: center;
+    background-color: var(--color-exlight-purple);
+    background-size: cover
+    height: 100%;
+    transition: all 1000ms;
+    border-radius: 0 150px 0 0;
+`;
 
 
 function Banner() {
@@ -114,10 +133,59 @@ function Banner() {
 
   return (
     <Container>
-        <BannerSection>
+        <ContentBox>
+            <Carousel play={10000} fill>
+                <Box>
+                    <WordBox>
+                        <Title>Amazing Feedback</Title>
+                        <Words>“{Feedbacks[0].words}”</Words>
+                        <Author><b>{Feedbacks[0].name}</b> <br/> {Feedbacks[0].about}</Author>
+                    </WordBox>
+                    <ImageBox style={{backgroundImage: `url(${Feedbacks[0].image})`}}/>
+                </Box>
+                <Box>
+                    <WordBox>
+                        <Title>Amazing Feedback</Title>
+                        <Words>“{Feedbacks[1].words}”</Words>
+                        <Author><b>{Feedbacks[1].name}</b> <br/> {Feedbacks[1].about}</Author>
+                    </WordBox>
+                    <ImageBox style={{backgroundImage: `url(${Feedbacks[1].image})`}}/>
+                </Box>
+                <Box>
+                    <WordBox>
+                        <Title>Amazing Feedback</Title>
+                        <Words>“{Feedbacks[2].words}”</Words>
+                        <Author><b>{Feedbacks[2].name}</b> <br/> {Feedbacks[2].about}</Author>
+                    </WordBox>
+                    <ImageBox style={{backgroundImage: `url(${Feedbacks[2].image})`}}/>
+                </Box>
+                <Box>
+                    <WordBox>
+                        <Title>Amazing Feedback</Title>
+                        <Words>“{Feedbacks[3].words}”</Words>
+                        <Author><b>{Feedbacks[3].name}</b> <br/> {Feedbacks[3].about}</Author>
+                    </WordBox>
+                    <ImageBox style={{backgroundImage: `url(${Feedbacks[3].image})`}}/>
+                </Box>
+                <Box>
+                    <WordBox>
+                        <Title>Amazing Feedback</Title>
+                        <Words>“{Feedbacks[4].words}”</Words>
+                        <Author><b>{Feedbacks[4].name}</b> <br/> {Feedbacks[4].about}</Author>
+                    </WordBox>
+                    <ImageBox style={{backgroundImage: `url(${Feedbacks[4].image})`}}/>
+                </Box>
+            </Carousel>
+        </ContentBox>
+        
+    </Container>
+  )
+}
+
+/* <BannerSection>
             <WordBox>
-                <HeadWord>Welcome to Care Home</HeadWord>
-                <Para>Culpa labore tempor est eiusmod labore aute proident. Ut amet officia officia est aute. Eu consectetur excepteur amet cillum id est. Adipisicing ex consectetur proident voluptate ad sit. Dolor duis id duis Lorem. Elit incididunt irure consectetur ipsum pariatur esse magna anim veniam. Id labore eiusmod exercitation aliqua laboris.Nostrud non pariatur consectetur quis id excepteur est magna ullamco laborum.</Para>
+                <HeadWord>Thank you for visiting Jo 2 Jos Service</HeadWord>
+                <Para>We are <i>Semi-Supported Independent Living</i> service providers. Our Ambition is to Lead in the provision of effective and empowering Semi-Supported Independent Living Service for young people aged 16 and above</Para>
                 <DownloadButtom>
                     Get Our Brochure
                     <PictureAsPdfOutlined />
@@ -131,9 +199,6 @@ function Banner() {
                     <ArrowRightAltOutlined />
                 </ImageSide>
             </ImageBox>
-        </BannerSection>
-    </Container>
-  )
-}
+        </BannerSection> */
 
 export default Banner

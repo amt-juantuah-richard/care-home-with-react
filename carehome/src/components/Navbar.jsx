@@ -1,4 +1,5 @@
 import { KeyboardArrowDownOutlined, Phone } from '@mui/icons-material';
+import { Layer } from 'grommet-icons';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #611b4b;
+  border-bottom: 1px solid #611b4b38;
 `;
 
 const Left = styled.div`
@@ -89,12 +90,17 @@ const MenuItem = styled.div`
   }
 `
 
-const Logo = styled.h2`
+const Name = styled.h2``;
+
+const Logo = styled.div`
   cursor: pointer;
   color: aliceblue;
   height: 60px;
   display: flex;
+  flex-flow: row;
   align-items: center;
+  gap: 10px;
+  justify-content: center;
 `;
 
 const LogoContain = styled.div`
@@ -138,10 +144,13 @@ function Navbar() {
       <Wrapper>
         <Left>
           <LogoContain>
-            <Logo>Care Home</Logo>
+            <Logo>
+              <Layer size='large' />
+              <Name><f style={{color: 'steelblue'}}>Jo2Jos</f> <br/> Service</Name>
+            </Logo>
             <LogoDown>
               <Phone />
-              <Tel href='tel:03030303030303'>03030303030303</Tel>
+              <Tel href='tel:01473316966'>01473316966</Tel>
             </LogoDown>
           </LogoContain>
         </Left>
