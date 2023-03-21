@@ -1,6 +1,7 @@
 import { AssignmentTurnedInOutlined, TaskAltOutlined, VerifiedOutlined } from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive';
 import SquareBox from './SquareBox';
 
 
@@ -14,6 +15,11 @@ const Container = styled.div`
     margin-top: 100px;
     border-radius: 0 150px 0 150px;
     background-color: var(--color-exlight-purple);
+    ${mobile({
+      padding: "40px 0 0",
+      marginTop: "50px",
+      borderRadius: "0 80px 0 80px"
+  })}
 `;
 
 const ReasonBox = styled.div`
@@ -25,8 +31,15 @@ const ReasonBox = styled.div`
   align-items: center;
 `;
 
-const HeadLine = styled.h2`
+const HeadLine = styled.h1`
   margin-bottom: 60px;
+  font-size: 30px;
+  width: 444px;
+  text-align: center;
+  ${mobile({
+        width: "300px",
+        fontSize: "20px"
+    })}
 `;
 
 const Reasons = styled.div`
@@ -66,7 +79,7 @@ function Why() {
   return (
     <Container>
       <ReasonBox>
-        <HeadLine>Why <b>Choose</b> Us?</HeadLine>
+        <HeadLine>An Experience you should expect from a Semi-Supported Independent Living Service Provider</HeadLine>
         <Reasons>
           <SquareBox stat={checkOne} headline={headline} point={point} />
           <SquareBox stat={checkTwo} headline={headline} point={point} />

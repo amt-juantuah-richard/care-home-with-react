@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Carousel } from 'grommet';
+import { mobile } from '../responsive';
 import { Feedbacks } from './Data';
 
 
@@ -25,6 +26,10 @@ export const Box = styled.div`
     flex-flow: row;
     border-radius: 0 100px 0 100px;
     // background-color: var(--color-exlight-purple);
+    ${mobile({
+        flexFlow: "column",
+        borderRadius: "0"
+    })}
 `;
 
 export const ImageBox = styled.div`
@@ -35,6 +40,10 @@ export const ImageBox = styled.div`
     height: 100%;
     transition: all 1000ms;
     border-radius: 0 0 0 100px;
+    ${mobile({
+        borderRadius: 0,
+        color: "red"
+    })}
 `;
 
 export const WordBox = styled.div`
@@ -47,6 +56,12 @@ export const WordBox = styled.div`
     padding: 0 50px;
     transition: all 500ms;
     gap: 20px;
+    ${mobile({
+        padding: "20px",
+        gap: "15px",
+        flex: 1,
+        borderRadius: "0px"
+    })}
 `;
 
 export const Title = styled.span`
@@ -59,6 +74,9 @@ export const Words = styled.p`
     transition: all 500ms;
     font-size: 25px;
     color: var(--color-purple);
+    ${mobile({
+        fontSize: "15px"
+    })}
 `;
 
 export const Author = styled.span`

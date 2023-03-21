@@ -7,6 +7,112 @@ export const BannerImages = [
     'https://media.istockphoto.com/id/1344422233/photo/beautiful-curly-brunette-nurse-sitting-on-the-bed-of-her-adult-patient-assisting-her-in-her.jpg?b=1&s=170667a&w=0&k=20&c=b9EGVNwnolFbOyftRpHCk7dzoNjdqjuvHxCO0IJVoFk='
 ]
 
+export const NavigationBarData = [
+    {
+        id: 0,
+        name: "Home",
+        path: "/",
+        subs: [],
+    },
+    {
+        id: 1,
+        name: "About",
+        path: "/about",
+        subs: [
+            {
+                id: 0,
+                name: "Our Organization",
+                path: "/about/organization"
+            },
+            {
+                id: 1,
+                name: "Values & Objectives",
+                path: "/about/values"
+            },
+            {
+                id: 2,
+                name: "Who We Support",
+                path: "/about/who-we-support"
+            }
+        ]
+    },
+    {
+        id: 2,
+        name: "Services",
+        path: "/services",
+        subs: [
+            {
+                id: 0,
+                name: "Integrated Health Care",
+                path: "/services/integrated-health-care"
+            },
+            {
+                id: 1,
+                name: "Housing Support",
+                path: "/services/housing-support"
+            },
+            {
+                id: 2,
+                name: "Creative Expression Program",
+                path: "/services/creative-expression"
+            },
+            {
+                id: 3,
+                name: "Drug & Alcohol Service",
+                path: "/services/drug-alcohol-service"
+            },
+            {
+                id: 4,
+                name: "Counselling Services",
+                path: "/services/counselling-services"
+            },
+            {
+                id: 5,
+                name: "Educational & Employment Support",
+                path: "/services/educational-employment-support"
+            },
+            {
+                id: 6,
+                name: "Allocated 1 to 1 (face to face) Interventions",
+                path: "/services/face-to-face-interventions"
+            },
+            {
+                id: 0,
+                name: "positive behaviour support (PBS)",
+                path: "/services/positive-behaviour-support"
+            }
+        ]
+    },
+    {
+        id: 3,
+        name: "More",
+        path: "/more",
+        subs: [
+            {
+                id: 0,
+                name: "Inspirations",
+                path: "/more/inspirations"
+            },
+            {
+                id: 1,
+                name: "The Youth",
+                path: "/more/youth"
+            },
+            {
+                id: 2,
+                name: "Gallery",
+                path: "/more/gallery"
+            },
+            {
+                id: 3,
+                name: "Career",
+                path: "/more/career"
+            }
+        ]
+    }
+]
+
+
 export const Feedbacks = [
     {
         image: 'https://images.unsplash.com/photo-1534614971-6be99a7a3ffd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',

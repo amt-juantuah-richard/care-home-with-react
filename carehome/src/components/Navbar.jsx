@@ -1,7 +1,31 @@
-import { KeyboardArrowDownOutlined, Phone } from '@mui/icons-material';
-import { Layer } from 'grommet-icons';
-import React from 'react';
+import { KeyboardArrowDownOutlined, KeyboardArrowLeftOutlined, Phone } from '@mui/icons-material';
+import { AppsRounded as AppsR, Close as Cls, Layer as Lay } from 'grommet-icons';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { NavigationBarData } from './Data';
+import { mobile } from '../responsive';
+
+const Layer = styled(Lay)`
+  ${mobile({
+    height: "34px",
+    width: "34px"
+  })}
+`;
+
+const AppsRounded = styled(AppsR)`
+  ${mobile({
+    height: "34px",
+    width: "34px"
+  })}
+`;
+
+const Close = styled(Cls)`
+  ${mobile({
+    height: "34px",
+    width: "34px"
+  })}
+`;
 
 const Container = styled.div`
   height: 60px;
@@ -10,6 +34,9 @@ const Container = styled.div`
   padding: 0 50px;
   top: 0;
   z-index: 4;
+  ${mobile({
+    padding: "0 25px"
+  })}
 `;
 
 const Wrapper = styled.div`
@@ -37,7 +64,10 @@ const MenuBox = styled.div`
   display: flex;
   // justify-content: space-between;
   align-items: center;
-`
+  ${mobile({
+    display: "none"
+  })}
+`;
 
 const MenuDrop = styled.ul`
   position: absolute;
@@ -68,6 +98,7 @@ const MenuDropItem = styled.li`
   }
 `;
 
+const Para = styled.span``;
 
 const MenuItem = styled.div`
   width: 96px;
@@ -80,17 +111,27 @@ const MenuItem = styled.div`
   gap: 1px;
   position: relative;
   transition: all 500ms;
+  & a ${Para} {
+    color: #424243;
+  };
   &:hover {
     background-color: #611b4b;
     color: aliceblue;
-
+    & a ${Para} {
+      color: var(--color-bg);
+    };
     & ${MenuDrop} {
       display: block;
-    }
+    };
   }
-`
+`;
 
-const Name = styled.h2``;
+
+const Name = styled.h2`
+  ${mobile({
+    fontSize: "1.2rem"
+  })}
+`;
 
 const Logo = styled.div`
   cursor: pointer;
@@ -113,6 +154,10 @@ const LogoContain = styled.div`
   align-items: center;
   flex-direction: column;
   top: -30px;
+  ${mobile({
+    width: "120px",
+    height: "80px"
+  })}
 `;
 
 const LogoDown = styled.div`
@@ -126,8 +171,6 @@ const LogoDown = styled.div`
   color: aliceblue;
 `;
 
-const Para = styled.span``;
-
 const Tel = styled.a`
   font-size: 12px;
   color: aliceblue;
@@ -138,7 +181,74 @@ const Tel = styled.a`
   }
 `;
 
+const MobileMenu = styled.div`
+  // width: 100%;
+  // height: 100%;
+
+  ${mobile({
+    display: "block"
+  })}
+  display: none;
+  justify-self: right;
+  align-self: center;
+  position: relative;
+  &:hover {
+    background-color: var(--color-purple);
+    & svg {
+      color: var(--color-bg);
+    }
+  };
+`;
+
+const MobileMenuSection = styled.div`
+  position: absolute;
+  right: 0;
+  background-color: var(--color-light-purple);
+  top: 60px;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+  align-items: right;
+
+`;
+
+
+const MobileMenuItem = styled.div`
+  width: 100%;
+  height: 30px;
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  gap: 1px;
+  position: relative;
+  transition: all 500ms;
+  & a ${Para} {
+    color: aliceblue;
+    text-align: right;
+  };
+  &:hover {
+    background-color: #611b4b;
+    color: aliceblue;
+    & a ${Para} {
+      color: var(--color-bg);
+    };
+    & ${MenuDrop} {
+      display: block;
+      position: abolute;
+      top: 0;
+      right: 90px;
+    };
+  }
+`;
+
 function Navbar() {
+  const [menuIcon, setMenuIcon] = useState('close');
+  
   return (
     <Container>
       <Wrapper>
@@ -156,43 +266,43 @@ function Navbar() {
         </Left>
         <Right>
           <MenuBox>
-            <MenuItem>
-              <Para>Home</Para>
-            </MenuItem>
-            <MenuItem>
-              <Para>About</Para>
-              <KeyboardArrowDownOutlined />
-              <MenuDrop>
-                <MenuDropItem>Our Organisation</MenuDropItem>
-                <MenuDropItem>Mission Statement</MenuDropItem>
-                <MenuDropItem>Who We Support</MenuDropItem>
-              </MenuDrop>
-            </MenuItem>
-            <MenuItem>
-              <Para>Services</Para>
-              <KeyboardArrowDownOutlined />
-              <MenuDrop>
-                <MenuDropItem>Counselling and Personal Support </MenuDropItem>
-                <MenuDropItem>Supported Accomodation</MenuDropItem>
-                <MenuDropItem>Escort Service User</MenuDropItem>
-                <MenuDropItem>Religion and Culture</MenuDropItem>
-                <MenuDropItem>Training and Development</MenuDropItem>
-              </MenuDrop>
-            </MenuItem>
-            <MenuItem>
-              <Para>More</Para>
-              <KeyboardArrowDownOutlined />
-              <MenuDrop>
-                <MenuDropItem>Contact </MenuDropItem>
-                <MenuDropItem>Young People </MenuDropItem>
-                <MenuDropItem>Local Authorities</MenuDropItem>
-                <MenuDropItem>Gallery</MenuDropItem>
-                <MenuDropItem>Find Other Service Providers</MenuDropItem>
-                <MenuDropItem>Career</MenuDropItem>
-              </MenuDrop>
-            </MenuItem>
+            {NavigationBarData.map((item, index)=> (
+              
+              <MenuItem key={index}>
+                <Link to={item.path} ><Para>{item.name}</Para></Link>
+                { item.subs.length ? 
+                <><KeyboardArrowDownOutlined /> 
+                <MenuDrop>
+                  {item.subs.map((sub, idx) => (
+                    <Link to={sub.path}><MenuDropItem key={idx}>{sub.name}</MenuDropItem></Link>
+                  ))}
+                </MenuDrop></>
+                : ''}
+              </MenuItem>
+            ))}
           </MenuBox>
         </Right>
+        <MobileMenu >
+          {
+            menuIcon === 'close' ? <AppsRounded onClick={() => (setMenuIcon(menuIcon === 'close' ? 'open' : 'close'))} size='large'/> :
+          <Close onClick={() => (setMenuIcon(menuIcon === 'close' ? 'open' : 'close'))} size='large'/>}
+          <MobileMenuSection style={{display: `${menuIcon === 'close' ? 'none' : 'flex'}`}}>
+            {NavigationBarData.map((item, index)=> (
+                
+                <MobileMenuItem key={index}>
+                  {item.subs.length ? <KeyboardArrowLeftOutlined /> : ''}
+                  <Link to={item.path} ><Para>{item.name}</Para></Link>
+                  { item.subs.length ?  
+                  <MenuDrop>
+                    {item.subs.map((sub, idx) => (
+                      <Link to={sub.path}><MenuDropItem key={idx}>{sub.name}</MenuDropItem></Link>
+                    ))}
+                  </MenuDrop>
+                  : ''}
+                </MobileMenuItem>
+              ))}
+          </MobileMenuSection>
+        </MobileMenu>
       </Wrapper>
     </Container>
   )

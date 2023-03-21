@@ -5,6 +5,8 @@ import { BannerImages } from './Data';
 import { Carousel } from 'grommet';
 import { Author, Box, Title, Words, WordBox } from './Feedback';
 import { Feedbacks } from './Data';
+import { Star } from 'grommet-icons';
+import { mobile } from '../responsive';
 
 const Span = styled.span`
     transition: margin 1300ms;
@@ -41,8 +43,11 @@ const Container = styled.div`
     height: 90vh;
     border-radius: 0 150px 0 150px;
     margin-top: 15px;
-    padding-left: 50px;
+    padding: 0 25px;
     // display: flex;
+    ${mobile({
+        borderRadius: 0,
+    })}
 `;
 
 const BannerSection = styled.div`
@@ -106,16 +111,22 @@ const ContentBox = styled.div`
     flex-flow: row;
     border-radius: 0 150px 0 150px;
     background-color: var(--color-exlight-purple);
+    ${mobile({
+        borderRadius: 0
+    })}
 `;
 
 const ImageBox = styled.div`
     flex: 1;
     background-position: center;
     background-color: var(--color-exlight-purple);
-    background-size: cover
+    background-size: cover;
     height: 100%;
     transition: all 1000ms;
     border-radius: 0 150px 0 0;
+    ${mobile({
+        borderRadius: 0
+    })}
 `;
 
 
@@ -137,7 +148,7 @@ function Banner() {
             <Carousel play={10000} fill>
                 <Box>
                     <WordBox>
-                        <Title>Amazing Feedback</Title>
+                        <Title><Star size='small' color='plain' /> Amazing Feedback</Title>
                         <Words>“{Feedbacks[0].words}”</Words>
                         <Author><b>{Feedbacks[0].name}</b> <br/> {Feedbacks[0].about}</Author>
                     </WordBox>
@@ -145,7 +156,7 @@ function Banner() {
                 </Box>
                 <Box>
                     <WordBox>
-                        <Title>Amazing Feedback</Title>
+                        <Title><Star size='small' color='plain' />Amazing Feedback</Title>
                         <Words>“{Feedbacks[1].words}”</Words>
                         <Author><b>{Feedbacks[1].name}</b> <br/> {Feedbacks[1].about}</Author>
                     </WordBox>
@@ -153,7 +164,7 @@ function Banner() {
                 </Box>
                 <Box>
                     <WordBox>
-                        <Title>Amazing Feedback</Title>
+                        <Title><Star size='small' color='plain' />Amazing Feedback</Title>
                         <Words>“{Feedbacks[2].words}”</Words>
                         <Author><b>{Feedbacks[2].name}</b> <br/> {Feedbacks[2].about}</Author>
                     </WordBox>
@@ -169,7 +180,7 @@ function Banner() {
                 </Box>
                 <Box>
                     <WordBox>
-                        <Title>Amazing Feedback</Title>
+                        <Title><Star size='small' color='plain' />Amazing Feedback</Title>
                         <Words>“{Feedbacks[4].words}”</Words>
                         <Author><b>{Feedbacks[4].name}</b> <br/> {Feedbacks[4].about}</Author>
                     </WordBox>
