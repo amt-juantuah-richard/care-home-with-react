@@ -1,7 +1,10 @@
 import { AssignmentTurnedInOutlined, TaskAltOutlined, VerifiedOutlined } from '@mui/icons-material';
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { mobile } from '../responsive';
+import { OtherImages, WhyUs } from './Data';
+import { LightNote } from './Services';
 import SquareBox from './SquareBox';
 
 
@@ -16,8 +19,8 @@ const Container = styled.div`
     border-radius: 0 150px 0 150px;
     background-color: var(--color-exlight-purple);
     ${mobile({
-      padding: "40px 0 0",
-      marginTop: "50px",
+      padding: "25px 0 0",
+      marginTop: "80px",
       borderRadius: "0 80px 0 80px"
   })}
 `;
@@ -29,6 +32,9 @@ const ReasonBox = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+  ${mobile({
+    width: "80%"
+})}
 `;
 
 const HeadLine = styled.h1`
@@ -50,8 +56,39 @@ const Reasons = styled.div`
   height: auto;
   width: 100%;
   padding: 0 50px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   // column-gap: 20px;
+  ${mobile({
+    flexFlow: "column",
+})}
+`;
+
+const ReachOut = styled.div`
+  width: 100vw;
+  height: 80vh;
+  background-color: var(--color-purple);
+  display: flex;
+  flex-flow: row;
+`;
+
+const EqualSection = styled.div`
+  flex: 1;
+  height: 100%;
+`;
+
+const Image = styled.img`
+  width: ${props => props.w};
+  height: ${props => props.h};
+  border-radius: ${props => props.r};
+`;
+
+const Button = styled.button`
+  height: 70px;
+  width: 200px;
+  border: none;
+  outline: none;
+  background-color: gold;
+  border-radius: 0 15px 0 15px;
 `;
 
 // const ReasonItem = styled.div`
@@ -70,23 +107,28 @@ function Why() {
   const checkTwo = <VerifiedOutlined />
   const checkThree = <TaskAltOutlined />
   
-  const headline = 'Eu sunt laboris esse ex.'
-  const point = [
-    'Ex ipsum dolore laboris pariatur cillum reprehenderit amet.',
-    'Ex ipsum dolore laboris pariatur cillum reprehenderit amet.',
-    'Ex ipsum dolore laboris pariatur cillum reprehenderit amet.'
-  ]
+  
   return (
-    <Container>
-      <ReasonBox>
-        <HeadLine>An Experience you should expect from a Semi-Supported Independent Living Service Provider</HeadLine>
-        <Reasons>
-          <SquareBox stat={checkOne} headline={headline} point={point} />
-          <SquareBox stat={checkTwo} headline={headline} point={point} />
-          <SquareBox stat={checkThree} headline={headline} point={point} />
-        </Reasons>
-      </ReasonBox>
-    </Container>
+    <>
+      <Container>
+        <ReasonBox>
+          <HeadLine>An Experience you should expect from a Semi-Supported Independent Living Service Provider</HeadLine>
+          <LightNote>Why choose us</LightNote>
+          <Reasons>
+            {WhyUs.map((item, index) => <SquareBox key={index} stat={checkOne} headline={item.headline} point={item.points} />)}
+          </Reasons>
+        </ReasonBox>
+      </Container>
+      <ReachOut>
+        <EqualSection><Image src={OtherImages[1].image} w="100%" h="80%" /></EqualSection>
+        <EqualSection><Image src={OtherImages[0].image} w="100%" h="80%" /></EqualSection>
+        <EqualSection>
+          <HeadLine>Reach Out</HeadLine>
+          <Link to={"/contact"}><Button>Contact Us</Button></Link>
+        </EqualSection>
+        <EqualSection><Image src={OtherImages[1].image} w="100%" h="80%" /></EqualSection>
+      </ReachOut>
+    </>
   )
 }
 

@@ -28,7 +28,8 @@ export const Box = styled.div`
     // background-color: var(--color-exlight-purple);
     ${mobile({
         flexFlow: "column",
-        borderRadius: "0"
+        borderRadius: "0",
+        position: "relative"
     })}
 `;
 
@@ -36,18 +37,19 @@ export const ImageBox = styled.div`
     flex: 1;
     background-position: center;
     background-color: var(--color-exlight-purple);
-    background-size: cover
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100%;
     transition: all 1000ms;
     border-radius: 0 0 0 100px;
     ${mobile({
         borderRadius: 0,
-        color: "red"
+        flex: 1
     })}
 `;
 
 export const WordBox = styled.div`
-    flex: 2;
+    flex: 1.2;
     height: 100%;
     padding: 30px 50px;
     display: flex;
@@ -59,8 +61,12 @@ export const WordBox = styled.div`
     ${mobile({
         padding: "20px",
         gap: "15px",
-        flex: 1,
-        borderRadius: "0px"
+        position: "absolute",
+        backgroundColor: "#f0f8ff57",
+        borderRadius: "0px",
+        width: "100%",
+        height: "30%",
+        top: "35%"
     })}
 `;
 
@@ -72,8 +78,10 @@ export const Title = styled.span`
 
 export const Words = styled.p`
     transition: all 500ms;
-    font-size: 25px;
+    font-size: 30px;
     color: var(--color-purple);
+    font-family: Georgia, serif;
+    font-style: italic;
     ${mobile({
         fontSize: "15px"
     })}

@@ -1,5 +1,8 @@
+import { CheckboxSelected } from 'grommet-icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 
 const Stat = styled.h1`
@@ -8,7 +11,10 @@ const Stat = styled.h1`
   & svg {
     width: 1.3em;
     height: 1.3em;
-  }
+  };
+  ${mobile({
+    fontSize: "16px"
+  })}
 `;
 
 const Rounded = styled.div`
@@ -23,11 +29,16 @@ const Rounded = styled.div`
   border: 5px solid var(--color-bg);
   top: -40px;
   transition: all 300ms;
+  ${mobile({
+    height: "60px",
+    width: "60px",
+    top: "-30px"
+  })}
 `;
 
 const Container = styled.div`
     width: 330px;
-    height: 350px;
+    height: 250px;
     display: flex;
     flex-flow: column;
     padding: 45px 5px 20px;
@@ -45,7 +56,10 @@ const Container = styled.div`
     };
     &:hover {
       border-bottom: 6px solid gold;
-    }
+    };
+    ${mobile({
+      height: "300px"
+    })}
 `;
 
 const Buttom = styled.button`
@@ -68,7 +82,11 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-    margin-top: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 10px;
 `
 
 const Headline = styled.h3`
@@ -76,6 +94,9 @@ const Headline = styled.h3`
     line-height: 24px;
     font-weight: 700;
     color: #19202d;
+    ${mobile({
+      fontSize: "15px"
+    })}
 `;
 
 
@@ -86,9 +107,9 @@ function SquareBox(props) {
       <Rounded><Stat>{stat}</Stat></Rounded>
       <Headline>{props.headline}</Headline>
       <List>
-      {props.point.map((item, index) => <ListItem key={index}>{item}</ListItem>)}
+      {props.point.map((item, index) => <ListItem key={index}><CheckboxSelected size='small' />{item}</ListItem>)}
       </List>
-      <Buttom>Read More...</Buttom>
+      <Link to={"/about"}><Buttom>Read More...</Buttom></Link>
     </Container>
   )
 }

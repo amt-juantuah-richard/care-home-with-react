@@ -1,7 +1,38 @@
 // import { FacebookRounded, Instagram, Linkedin, Twitter } from '@mui/icons-material';
-import { Facebook, Instagram, Linkedin, Twitter } from 'grommet-icons';
+import { Facebook as Fb, Instagram as Inst, Linkedin as Lin, Twitter as Tw } from 'grommet-icons';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
+
+const Facebook = styled(Fb)`
+    ${mobile({
+        width: "34px",
+        height: "34px"
+    })}
+`;
+
+const Instagram = styled(Inst)`
+    ${mobile({
+        width: "34px",
+        height: "34px"
+    })}
+`;
+
+
+const Linkedin = styled(Lin)`
+    ${mobile({
+        width: "34px",
+        height: "34px"
+    })}
+`;
+
+const Twitter = styled(Tw)`
+    ${mobile({
+        width: "34px",
+        height: "34px"
+    })}
+`;
 
 const Container = styled.div`
     width: 100vw;
@@ -24,6 +55,10 @@ const TopWhite = styled.div`
     border-radius: 0 0 0 150px;
     position: relative;
     z-index: 2;
+    ${mobile({
+        borderRadius: '0 0 0 80px'
+
+    })}
 `;
 
 const Top = styled.div`
@@ -42,7 +77,6 @@ const ListWrap = styled.div`
     display: flex;
     flex-flow: wrap row;
     height: auto;
-    align-items: center;
     min-width: 150px;
 `;
 
@@ -50,6 +84,7 @@ const List = styled.ul`
     list-style: none;
     flex: 1;
     min-width: 130px;
+    margin-left: 20px;
 `;
 
 const Contact = styled.div`
@@ -104,6 +139,19 @@ const Socials = styled.div`
 const ListItem = styled.li`
     color: var(--color-bg);
     line-height: 30px;
+    display: flex;
+    flex-flow: nowrap row;
+    & a {
+        color: var(--color-bg);
+        &:hover {
+        color: gold;
+        // opacity: 0.8;
+    }
+    };
+    &:hover a {
+        color: gold;
+        // opacity: 0.6;
+    }
 `;
 
 const Bottom = styled.div`
@@ -112,6 +160,7 @@ const Bottom = styled.div`
     position: relative;
     padding-top: 30px;
     border-top: 0.5px dashed #f0f8ff14;
+    overflow: hidden;
 `;
 
 const BigLetter = styled.h3`
@@ -121,12 +170,31 @@ const BigLetter = styled.h3`
     color: #f0f8ff14;
     letter-spacing: 2.5vw;
     text-align: center;
+    ${mobile({
+        fontSize: "80px"
+    })}
 `
 
 const ListHead = styled.h3`
     color: #f0f8ff57;
-    margin-bottom: 18px;
+    margin: 18px 0;
+    text-transform: uppercase;
+    font-size: 15px;
 `;
+
+const Copyright = styled.div`
+    width: 100%;
+    height: 80px;
+    background-color: #3c3c3c;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--color-bg);
+`;
+
+const Para = styled.p``;
 
 function Footer() {
 
@@ -152,32 +220,31 @@ function Footer() {
                 </Contact>
                 <ListWrap>
                     <List>
-                        <ListHead>About Us</ListHead>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
+                        <ListHead>Address / Location</ListHead>
+                        <ListItem>United Kingdom </ListItem>
+                        <ListItem>76 Jovian Way </ListItem>
+                        <ListItem>Suffolk, IP1 5AT </ListItem>
                     </List>
                     <List>
-                        <ListHead>Xxxxx</ListHead>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
+                        <ListHead>Links</ListHead>
+                        <ListItem><Link to={"/about"}>About Us</Link> </ListItem>
+                        <ListItem><Link to={"/support-us"}>Support Us</Link> </ListItem>
+                        <ListItem><Link to={"/services"}>Services</Link> </ListItem>
+                        <ListItem><Link to={"/articles"}>Articles</Link> </ListItem>
                     </List>
                     <List>
-                        <ListHead>Xxxxx</ListHead>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
-                        <ListItem>Est culpa nulla </ListItem>
+                        <ListHead>Get in touch</ListHead>
+                        <ListItem>Email: <a href='mailto:joe@jo2josservice.com'>joe@jo2josservice.com</a> </ListItem>
+                        <ListItem>Tel: <a href='tel:01473316966'>01473316966</a> </ListItem>
+                        <ListItem>Mob: <a href='tel:+447459196375'>447459196375</a> </ListItem>
                     </List>
                 </ListWrap>
             </Top>
             <Bottom>
-                <BigLetter>JO 2 JOS</BigLetter>
+                <BigLetter>JO2JOS</BigLetter>
             </Bottom>
         </Container>
+        <Copyright><Para>Copyright © 2023 - 2025 by <b>OJ & Bridge Code House</b>, all rights reserved.<br/>Kumasi (nanamcroj@gmail.com)</Para></Copyright>
     </>
   )
 }

@@ -77,7 +77,7 @@ export const NavigationBarData = [
                 path: "/services/face-to-face-interventions"
             },
             {
-                id: 0,
+                id: 7,
                 name: "positive behaviour support (PBS)",
                 path: "/services/positive-behaviour-support"
             }
@@ -116,65 +116,151 @@ export const NavigationBarData = [
 export const Feedbacks = [
     {
         image: 'https://images.unsplash.com/photo-1534614971-6be99a7a3ffd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-        words: 'Pariatur excepteur elit est veniam ullamco. Minim commodo amet enim dolore cillum qui minim. Quis officia nulla dolore commodo cupidatat irure commodo consectetur.',
-        name: 'Irure occaecat',
-        about: 'Manager at Pariatur'
+        words: 'I love the reception of the staff. I truly felt at home',
+        name: 'Ron Cooper',
+        about: 'Business Director'
     },
     {
-        image: 'https://images.unsplash.com/photo-1548449112-96a38a643324?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-        words: 'Ipsum magna qui et mollit nisi irure sunt. Ea duis aliqua fugiat et aute sit. Sunt ullamco amet ea irure exercitation aliquip aute. Minim et sit aute et laborum tempor nisi duis duis tempor. Adipisicing est proident non quis irure amet adipisicing Lorem.',
-        name: 'Excepteur Elit',
-        about: 'Manager at Magna'
+        image: 'https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80',
+        words: 'It\'s my go-to place whenever I feel lost. I made really amazing friends there with strong memories of what I call: sweet experiences',
+        name: 'Carthy Lopez',
+        about: 'Past Resident'
     },
     {
-        image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=461&q=80',
-        words: 'Lorem esse deserunt occaecat magna veniam nisi labore nisi officia ullamco dolor laboris ad nisi. Amet excepteur dolore excepteur labore sunt qui ut in minim et. Veniam consectetur cillum sint voluptate aute. Ea qui ullamco voluptate laborum qui esse duis. Amet occaecat eu cupidatat tempor minim ut eu pariatur.',
+        image: 'https://images.unsplash.com/photo-1589199051919-52f5af09d5a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80',
+        words: 'All I can say is, thank you for my brother. He is doing very well now. His name is Kwame. The whole family is grateful',
+        name: 'Aku Sika Jones',
+        about: 'University Student'
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1601168658155-24ba806c086a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+        words: 'The way they care about their residents and clients, if families, couples and homes replicated such, much of society\'s menaces would be solved',
+        name: 'Kesia Ainsley.',
+        about: 'Manager of a Cafe Shop'
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1604882737274-4afaddefec9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+        words: 'I am glad to say I am free from my addiction, thanks to them. Till date I still get reminders from them to keep me off from my addiction',
         name: 'Culpa Rost.',
-        about: 'Manager at Occaecat'
-    },
-    {
-        image: 'https://images.unsplash.com/photo-1611880147493-7542bdb0f024?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1033&q=80',
-        words: 'Lorem esse deserunt occaecat magna veniam nisi labore nisi officia ullamco dolor laboris ad nisi. Amet excepteur dolore excepteur labore sunt qui ut in minim et. Veniam consectetur cillum sint voluptate aute. Ea qui ullamco voluptate laborum qui esse duis. Amet occaecat eu cupidatat tempor minim ut eu pariatur.',
-        name: 'Culpa Rost.',
-        about: 'Manager at Occaecat'
-    },
-    {
-        image: 'https://images.unsplash.com/photo-1547812563-b843ff353559?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-        words: 'Lorem esse deserunt occaecat magna veniam nisi labore nisi officia ullamco dolor laboris ad nisi. Amet excepteur dolore excepteur labore sunt qui ut in minim et. Veniam consectetur cillum sint voluptate aute. Ea qui ullamco voluptate laborum qui esse duis. Amet occaecat eu cupidatat tempor minim ut eu pariatur.',
-        name: 'Culpa Rost.',
-        about: 'Manager at Occaecat'
+        about: 'Artist and Gardener'
     }
 ]
 
 export const ServicesData = [
     {
+        id: 0,
+        title: "Integrated Health Care",
+        path: "/services/integrated-health-care",
+        image: 'https://media.istockphoto.com/id/1467385867/photo/portrait-of-a-smiling-disabled-young-man-performing-therapy-with-a-motor-therapy-team-at-the.jpg?b=1&s=170667a&w=0&k=20&c=GAViRLiz3JWxk92FI75YH9ltVj9FhacQVWYkSutv-ho=',
+        about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
+    },
+    {
+        id: 1,
+        title: "Housing Support",
+        path: "/services/housing-support",
+        image: 'https://images.unsplash.com/photo-1594841359067-31caf8216011?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
+    },
+    {
+        id: 2,
+        title: "Creative Expression Program",
+        path: "/services/creative-expression",
         image: 'https://images.unsplash.com/photo-1525336778665-96f9a12c5c4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
-        title: 'Companionship',
         about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
     },
     {
-        image: 'https://images.unsplash.com/photo-1494438043283-22a3c46831a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-        title: 'Home Help',
+        id: 3,
+        title: "Drug & Alcohol Service",
+        path: "/services/drug-alcohol-service",
+        image: 'https://images.unsplash.com/photo-1523885460099-30c3afdf5114?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
         about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
     },
     {
-        image: 'https://media.istockphoto.com/id/1433198860/photo/healthcare-support-and-nurse-working-in-senior-care-bonding-with-patient-showing-affection-in.jpg?b=1&s=170667a&w=0&k=20&c=fQ3mJgzxwiOT73xXAgiNtB45b3-YSla7Syu7n7KigNo=',
-        title: 'Personal Care',
+        id: 4,
+        title: "Counselling Services",
+        path: "/services/counselling-services",
+        image: 'https://images.unsplash.com/photo-1525336778665-96f9a12c5c4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
         about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
     },
     {
-        image: 'https://media.istockphoto.com/id/1470789111/photo/a-helping-hand-volunteering-and-senior-care.jpg?b=1&s=170667a&w=0&k=20&c=RpZuklJwq7JlPIcSgRjmNTM9gHIH_jE5fJ6wrVWbjnM=',
-        title: 'Live-in Care',
+        id: 5,
+        title: "Educational & Employment Support",
+        path: "/services/educational-employment-support",
+        image: 'https://images.unsplash.com/photo-1596495717678-69df9f89c2a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
     },
     {
-        image: 'https://images.unsplash.com/photo-1524117853209-a2fcab240719?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8eW91dGglMjBjYXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-        title: 'Live-in Care',
+        id: 6,
+        title: "Allocated 1 to 1 (face to face) Interventions",
+        path: "/services/face-to-face-interventions",
+        image: 'https://media.istockphoto.com/id/1463773444/photo/excited-boy-talking-to-psychologist.jpg?b=1&s=170667a&w=0&k=20&c=rULm3OMvzuslkGJQjR87SS3io3_IZ5ZhqR4UVuVNq0Q=',
         about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
     },
     {
-        image: 'https://images.unsplash.com/photo-1533444273691-ebf51af8fd9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cmV0aXJlbWVudHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-        title: 'Retirement Living',
+        id: 7,
+        title: "Positive Behaviour Support (PBS)",
+        path: "/services/positive-behaviour-support",
+        image: 'https://images.unsplash.com/photo-1542623173215-4fe2adeec903?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         about: 'Enim ut amet aliquip id incididunt mollit ullamco sint proident ad ex.'
     }
 ]
+
+export const WhyUs = [
+    {
+        id: 0,
+        headline: 'Human Dignity',
+        points: [
+            'A safe environment for residents',
+            'A caring atmosphere',
+            'Promote freedom'
+        ]
+    },
+    {
+        id: 1,
+        headline: 'Service Quality',
+        points: [
+            'Constant service appraisal',
+            'Timeliness, prudence and essence',
+            'Respect and accomodating',
+        ]
+    },
+    {
+        id: 2,
+        headline: 'Well Trained Staff',
+        points: [
+            'Staff who understands human emotions and needs',
+            'Highly responsive staff to individual needs',
+            'Well equipped and motivated staff',
+        ]
+    },
+    {
+        id: 3,
+        headline: 'Individual Person Centered',
+        points: [
+            'Person centered support',
+            'Respect of choices, rights, privacy and security'
+        ]
+    },
+    {
+        id: 4,
+        headline: 'Professionalism',
+        points: [
+            'Exceed client expectations',
+            'Lead the industry with innovations',
+            'Appreciate hygiene'
+        ]
+    }
+]
+
+export const OtherImages = [
+    {
+        id: 0,
+        about: "reach out",
+        image: "https://images.unsplash.com/photo-1599493035427-4c0ed9008173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=605&q=80"
+    },
+    {
+        id: 1,
+        about: "stars on image",
+        image: "http://www.ukcarepartnership.com/assets/images/shapes/cta-1-1-shape-1.png"
+    }
+] 

@@ -1,21 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 import { ServicesData } from './Data';
 
 const Container = styled.div`
     height: auto;
     width: 100vw;
     padding:100px 50px;
+    ${mobile({
+        padding: "50px 25px"
+    })}
 `;
 
 const Main = styled.div`
     height: auto;
     width: 100%;
     padding:20px 0;
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-flow: wrap row;
     justify-content: space-between;
     row-gap: 80px;
+    ${mobile({
+        flexFlow: "column",
+        alignItems: "center"
+    })}
 `;
 
 const Explore = styled.button`
@@ -92,14 +101,24 @@ const Card = styled.div`
 `;
 
 const HeadTitle = styled.h2`
+    margin-bottom: 5px;
+`;
+
+export const LightNote = styled.span`
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--color-purple);
+    font-weight: 700;
     margin-bottom: 70px;
+    text-align: left;
 `;
 
 
 function Services() {
   return (
     <Container>
-        <HeadTitle>Our Services</HeadTitle>
+        <HeadTitle>Our Services Catalogue</HeadTitle>
+        <LightNote>See all the services we render</LightNote>
         <Main>
             {ServicesData.map((item, index) => (
                     <Card key={index}>
@@ -107,7 +126,7 @@ function Services() {
                         <WordBox>
                             <Title>{item.title}</Title>
                             <Words>{item.about}</Words>
-                            <Explore>Explore</Explore>
+                            <Link to={item.path}><Explore>Explore</Explore></Link>
                         </WordBox>
                     </Card>
                 )

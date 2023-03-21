@@ -246,6 +246,10 @@ const MobileMenuItem = styled.div`
   }
 `;
 
+const Span = styled.span`
+  color: steelblue !important;
+`;
+
 function Navbar() {
   const [menuIcon, setMenuIcon] = useState('close');
   
@@ -256,7 +260,7 @@ function Navbar() {
           <LogoContain>
             <Logo>
               <Layer size='large' />
-              <Name><f style={{color: 'steelblue'}}>Jo2Jos</f> <br/> Service</Name>
+              <Name><Span>Jo2Jos</Span> <br/> Service</Name>
             </Logo>
             <LogoDown>
               <Phone />

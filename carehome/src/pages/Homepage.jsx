@@ -15,8 +15,8 @@ function Homepage() {
     <Container>
       <Navbar />
       <Banner />
-      <Why />
       <Services />
+      <Why />
       <Feedback />
       <Footer />
     </Container>

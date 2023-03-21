@@ -5,7 +5,7 @@ import { BannerImages } from './Data';
 import { Carousel } from 'grommet';
 import { Author, Box, Title, Words, WordBox } from './Feedback';
 import { Feedbacks } from './Data';
-import { Star } from 'grommet-icons';
+import { Star, StarHalf } from 'grommet-icons';
 import { mobile } from '../responsive';
 
 const Span = styled.span`
@@ -43,10 +43,11 @@ const Container = styled.div`
     height: 90vh;
     border-radius: 0 150px 0 150px;
     margin-top: 15px;
-    padding: 0 25px;
+    padding: 0 50px;
     // display: flex;
     ${mobile({
         borderRadius: 0,
+        padding: "0 25px"
     })}
 `;
 
@@ -125,8 +126,14 @@ const ImageBox = styled.div`
     transition: all 1000ms;
     border-radius: 0 150px 0 0;
     ${mobile({
-        borderRadius: 0
+        borderRadius: 0,
+        backgroundPosition: "top"
     })}
+`;
+
+const To = styled.span`
+    font-size: 200%;
+    color: gold;
 `;
 
 
@@ -148,40 +155,40 @@ function Banner() {
             <Carousel play={10000} fill>
                 <Box>
                     <WordBox>
-                        <Title><Star size='small' color='plain' /> Amazing Feedback</Title>
-                        <Words>“{Feedbacks[0].words}”</Words>
+                        <Title>{[1,2,3,4,5].map((start, id) => <Star key={id} size='small' color='plain' />)}  Amazing Feedback</Title>
+                        <Words><To>&#8220;</To>{Feedbacks[0].words}</Words>
                         <Author><b>{Feedbacks[0].name}</b> <br/> {Feedbacks[0].about}</Author>
                     </WordBox>
                     <ImageBox style={{backgroundImage: `url(${Feedbacks[0].image})`}}/>
                 </Box>
                 <Box>
                     <WordBox>
-                        <Title><Star size='small' color='plain' />Amazing Feedback</Title>
-                        <Words>“{Feedbacks[1].words}”</Words>
+                        <Title>{[1,2,3,4].map((start, id) => <Star key={id} size='small' color='plain' />)}  Amazing Feedback</Title>
+                        <Words><To>&#8220;</To>{Feedbacks[1].words}</Words>
                         <Author><b>{Feedbacks[1].name}</b> <br/> {Feedbacks[1].about}</Author>
                     </WordBox>
                     <ImageBox style={{backgroundImage: `url(${Feedbacks[1].image})`}}/>
                 </Box>
                 <Box>
                     <WordBox>
-                        <Title><Star size='small' color='plain' />Amazing Feedback</Title>
-                        <Words>“{Feedbacks[2].words}”</Words>
+                        <Title>{[1,2,3,4].map((start, id) => <Star key={id} size='small' color='plain' />)}<StarHalf size='small' color='plain' />  Amazing Feedback</Title>
+                        <Words><To>&#8220;</To>{Feedbacks[2].words}</Words>
                         <Author><b>{Feedbacks[2].name}</b> <br/> {Feedbacks[2].about}</Author>
                     </WordBox>
                     <ImageBox style={{backgroundImage: `url(${Feedbacks[2].image})`}}/>
                 </Box>
                 <Box>
                     <WordBox>
-                        <Title>Amazing Feedback</Title>
-                        <Words>“{Feedbacks[3].words}”</Words>
+                        <Title>{[1,2,3].map((start, id) => <Star key={id} size='small' color='plain' />)}<StarHalf size='small' color='plain' />  Amazing Feedback</Title>
+                        <Words><To>&#8220;</To>{Feedbacks[3].words}</Words>
                         <Author><b>{Feedbacks[3].name}</b> <br/> {Feedbacks[3].about}</Author>
                     </WordBox>
                     <ImageBox style={{backgroundImage: `url(${Feedbacks[3].image})`}}/>
                 </Box>
                 <Box>
                     <WordBox>
-                        <Title><Star size='small' color='plain' />Amazing Feedback</Title>
-                        <Words>“{Feedbacks[4].words}”</Words>
+                        <Title>{[1,2,3,4].map((start, id) => <Star key={id} size='small' color='plain' />)}<StarHalf size='small' color='plain' />  Amazing Feedback</Title>
+                        <Words><To>&#8220;</To>{Feedbacks[4].words}</Words>
                         <Author><b>{Feedbacks[4].name}</b> <br/> {Feedbacks[4].about}</Author>
                     </WordBox>
                     <ImageBox style={{backgroundImage: `url(${Feedbacks[4].image})`}}/>
