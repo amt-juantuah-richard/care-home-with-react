@@ -8,8 +8,8 @@ import { mobile } from '../responsive';
 
 const Layer = styled(Lay)`
   ${mobile({
-    height: "34px",
-    width: "34px"
+    height: "38px",
+    width: "38px"
   })}
 `;
 
@@ -129,7 +129,7 @@ const MenuItem = styled.div`
 
 const Name = styled.h2`
   ${mobile({
-    fontSize: "1.2rem"
+    fontSize: "1.3rem"
   })}
 `;
 
@@ -155,8 +155,8 @@ const LogoContain = styled.div`
   flex-direction: column;
   top: -30px;
   ${mobile({
-    width: "120px",
-    height: "80px"
+    width: "150px",
+    height: "90px"
   })}
 `;
 
@@ -229,7 +229,7 @@ const MobileMenuItem = styled.div`
   position: relative;
   border-right: 2px solid gold;
   padding-right: 8px;
-  & a ${Para} {
+  & ${Para} {
     color: aliceblue;
     text-align: right;
   };
@@ -237,7 +237,7 @@ const MobileMenuItem = styled.div`
     border-bottom: 2px solid gold;
     background-color: #611b4b;
     color: aliceblue;
-    & a ${Para} {
+    & ${Para} {
       color: gold;
     };
     & ${MenuDrop} {
@@ -297,8 +297,8 @@ function Navbar() {
             {NavigationBarData.map((item, index)=> (
                 
                 <MobileMenuItem key={index}>
-                  {item.subs.length ? <KeyboardArrowLeftOutlined /> : ''}
-                  <Link to={item.path} ><Para>{item.name}</Para></Link>
+                  {item.subs.length ? <KeyboardArrowLeftOutlined /> : '  '}
+                  {item.subs.length ? <Para>{item.name}</Para> : <Link to={item.path} ><Para>{item.name}</Para></Link> }
                   { item.subs.length ?  
                   <MenuDrop>
                     {item.subs.map((sub, idx) => (

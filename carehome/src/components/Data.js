@@ -256,7 +256,7 @@ export const OtherImages = [
     {
         id: 0,
         about: "reach out",
-        image: "https://images.unsplash.com/photo-1599493035427-4c0ed9008173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=605&q=80"
+        image: "https://images.unsplash.com/photo-1505455184862-554165e5f6ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
     },
     {
         id: 1,
