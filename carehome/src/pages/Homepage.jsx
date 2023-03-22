@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Banner from '../components/Banner';
-import Feedback from '../components/Feedback';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Services from '../components/Services';

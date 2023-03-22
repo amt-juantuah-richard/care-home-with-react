@@ -127,7 +127,6 @@ const ImageBox = styled.div`
     border-radius: 0 150px 0 0;
     ${mobile({
         borderRadius: 0,
-        backgroundPosition: "top"
     })}
 `;
 
