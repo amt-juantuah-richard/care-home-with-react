@@ -60,12 +60,12 @@ export const WordBox = styled.div`
     gap: 20px;
     ${mobile({
         padding: "20px",
-        gap: "15px",
+        gap: "8px",
         position: "absolute",
         backgroundColor: "#f0f8ff57",
         borderRadius: "0px",
         width: "100%",
-        height: "30%",
+        height: "40%",
         top: "35%"
     })}
 `;

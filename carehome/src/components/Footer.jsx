@@ -55,9 +55,12 @@ const TopWhite = styled.div`
     border-radius: 0 0 0 150px;
     position: relative;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     ${mobile({
-        borderRadius: '0 0 0 80px'
-
+        borderRadius: '0 0 0 80px',
+        height: "70vh"
     })}
 `;
 
@@ -185,7 +188,7 @@ const ListHead = styled.h3`
 const Copyright = styled.div`
     width: 100%;
     height: 80px;
-    background-color: #3c3c3c;
+    background-color: #101010;
     text-align: center;
     display: flex;
     align-items: center;
@@ -195,6 +198,40 @@ const Copyright = styled.div`
 `;
 
 const Para = styled.p``;
+
+const WhiteContain = styled.div`
+    display: flex;
+    flex-flow: column;
+    width: 70vw;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    ${mobile({
+        width: "90vw"
+    })}
+`;
+
+const WhiteHead = styled.h1`
+    color: #092830;
+    text-align: center;
+    font-family: georgia;
+    font-style: italic;
+    ${mobile({
+        fontSize: "25px"
+    })}
+`;
+
+const WhitePara = styled.p`
+    color: var(--color-purple);
+    text-align: center;
+    font-size: 20px;
+    ${mobile({
+        fontSize: "14px"
+    })}
+`;
+
+
 
 function Footer() {
 
@@ -206,7 +243,12 @@ function Footer() {
     ]
   return (
     <>
-        <TopWhite />
+        <TopWhite>
+            <WhiteContain>
+                <WhiteHead>We are Happy to Build a Great Society with you</WhiteHead>
+                <WhitePara>Our Fully Trained and Qualified Staff and Facilities are immediately responsive and available to suport the individual needs of our clients. We are willing to facilitate the possible highest quality of life within Our Service range.</WhitePara>
+            </WhiteContain>
+        </TopWhite>
         <Container>
             <Top>
                 <Contact>
@@ -215,7 +257,10 @@ function Footer() {
                         <Number href='tel:01473316966'>01473316966</Number>
                     </MainContact>
                     <Socials>
-                        {Comms.map((item, index) => item)}
+                        <a href='www.facebook.com/jo2jos'><Facebook color='plain' size='large'/></a> 
+                        <a href='www.twitter.com/jo2jos'><Twitter color='plain' size='large'/></a>
+                        <a href='www.instagram.com/jo2jos'><Instagram color='plain' size='large'/></a>
+                        <a href='www.linkedin.com/jo2jos'><Linkedin color='plain' size='large'/></a>
                     </Socials>
                 </Contact>
                 <ListWrap>
@@ -244,7 +289,7 @@ function Footer() {
                 <BigLetter>JO2JOS</BigLetter>
             </Bottom>
         </Container>
-        <Copyright><Para>Copyright © 2023 - 2025 by <b>OJ & Bridge Code House</b>, all rights reserved.<br/>Kumasi (nanamcroj@gmail.com)</Para></Copyright>
+        <Copyright><Para>Copyright © 2023 - 2025 by <b style={{color: "gold"}}>OJ & Bridge Code House</b>, all rights reserved.<br/>Kumasi (nanamcroj@gmail.com)</Para></Copyright>
     </>
   )
 }

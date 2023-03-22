@@ -203,21 +203,22 @@ const MobileMenu = styled.div`
 const MobileMenuSection = styled.div`
   position: absolute;
   right: 0;
-  background-color: var(--color-light-purple);
-  top: 60px;
+  background-color: var(--color-purple);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top: 38px;
   width: auto;
   height: auto;
-  padding: 15px;
+  padding: 30px;
   display: flex;
   flex-flow: column;
   gap: 15px;
   align-items: right;
-
+  border-radius: 0 0 0 18px;
 `;
 
 
 const MobileMenuItem = styled.div`
-  width: 100%;
+  // width: 100%;
   height: 30px;
   display: flex;
   margin-left: 10px;
@@ -226,16 +227,18 @@ const MobileMenuItem = styled.div`
   justify-content: space-between;
   gap: 1px;
   position: relative;
-  transition: all 500ms;
+  border-right: 2px solid gold;
+  padding-right: 8px;
   & a ${Para} {
     color: aliceblue;
     text-align: right;
   };
   &:hover {
+    border-bottom: 2px solid gold;
     background-color: #611b4b;
     color: aliceblue;
     & a ${Para} {
-      color: var(--color-bg);
+      color: gold;
     };
     & ${MenuDrop} {
       display: block;

@@ -17,7 +17,6 @@ function Homepage() {
       <Banner />
       <Services />
       <Why />
-      <Feedback />
       <Footer />
     </Container>
   )
