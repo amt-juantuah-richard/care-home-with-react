@@ -21,6 +21,7 @@ const Main = styled.div`
     flex-flow: wrap row;
     justify-content: space-between;
     row-gap: 80px;
+    margin-top: 50px;
     ${mobile({
         flexFlow: "column",
         alignItems: "center"

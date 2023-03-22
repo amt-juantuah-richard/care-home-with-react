@@ -261,10 +261,12 @@ function Navbar() {
       <Wrapper>
         <Left>
           <LogoContain>
-            <Logo>
-              <Layer size='large' />
-              <Name><Span>Jo2Jos</Span> <br/> Service</Name>
-            </Logo>
+            <Link to={"/"}>
+              <Logo>
+                <Layer size='large' />
+                <Name><Span>Jo2Jos</Span> <br/> Service</Name>
+              </Logo>
+            </Link>
             <LogoDown>
               <Phone />
               <Tel href='tel:01473316966'>01473316966</Tel>
