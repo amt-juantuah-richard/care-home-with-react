@@ -89,7 +89,7 @@ const Card = styled.div`
     };
     &:hover ${WordBox} {
         padding-left: 20px;
-        background-color: var(--color-purple);
+        background-color: rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)});
     };
     &:hover ${Words} {
         font-size: 18px;

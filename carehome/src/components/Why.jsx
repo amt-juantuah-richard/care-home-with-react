@@ -48,6 +48,14 @@ const HeadLine = styled.h1`
     })}
 `;
 
+const ReachHead = styled.h1`
+  font-size: 30px;
+  ${mobile({
+    width: "300px",
+    fontSize: "20px"
+})}
+`;
+
 const Reasons = styled.div`
   display: flex;
   flex-flow: row;
@@ -65,7 +73,7 @@ const Reasons = styled.div`
 
 const ReachOut = styled.div`
   width: 100vw;
-  height: 80vh;
+  height: 50vh;
   background-color: var(--color-purple);
   display: flex;
   flex-flow: row;
@@ -74,12 +82,37 @@ const ReachOut = styled.div`
 const EqualSection = styled.div`
   flex: 1;
   height: 100%;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 `;
 
-const Image = styled.img`
-  width: ${props => props.w};
-  height: ${props => props.h};
-  border-radius: ${props => props.r};
+const Image1 = styled.img`
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -18px;
+  left: -20px;
+  transform: rotate(30deg);
+  z-index: 1;
+`;
+
+const Image2 = styled.div`
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background-image: url(${props => props.im});
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-bg);
+  border: 5px solid gold;
+  top: 70px;
+  z-index: 2;
 `;
 
 const Button = styled.button`
@@ -88,8 +121,21 @@ const Button = styled.button`
   border: none;
   outline: none;
   background-color: gold;
-  border-radius: 0 15px 0 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: var(--color-purple);
+  &:hover {
+    background-color: var(--color-purple);
+    color: gold;
+    border: 3px solid gold;
+  };
+  ${mobile({
+    height: "50px",
+    width: "150px",
+  })}
 `;
+
+const Span = styled.span``;
 
 // const ReasonItem = styled.div`
 //   flex: 1;
@@ -103,9 +149,9 @@ const Button = styled.button`
 
 function Why() {
 
-  const checkOne = <AssignmentTurnedInOutlined />
+  const checkThree = <AssignmentTurnedInOutlined />
   const checkTwo = <VerifiedOutlined />
-  const checkThree = <TaskAltOutlined />
+  const checkOne = <TaskAltOutlined />
   
   
   return (
@@ -120,13 +166,13 @@ function Why() {
         </ReasonBox>
       </Container>
       <ReachOut>
-        <EqualSection><Image src={OtherImages[1].image} w="100%" h="80%" /></EqualSection>
-        <EqualSection><Image src={OtherImages[0].image} w="100%" h="80%" /></EqualSection>
+        <EqualSection><Image1 src={OtherImages[1].image} w="100px" h="100px" /></EqualSection>
+        <EqualSection><Image2 im={OtherImages[0].image} /></EqualSection>
         <EqualSection>
-          <HeadLine>Reach Out</HeadLine>
+          <ReachHead>Reach Out Today</ReachHead>
+          <Span>Reach out for more enquiries and scheduling </Span>
           <Link to={"/contact"}><Button>Contact Us</Button></Link>
         </EqualSection>
-        <EqualSection><Image src={OtherImages[1].image} w="100%" h="80%" /></EqualSection>
       </ReachOut>
     </>
   )
