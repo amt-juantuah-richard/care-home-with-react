@@ -73,6 +73,7 @@ const Top = styled.div`
     row-gap: 80px;
     margin-top: 20px;
     margin-bottom: 30px;
+    padding: 50px 0;
 `;
 
 const ListWrap = styled.div`
