@@ -3,7 +3,7 @@ import { AppsRounded as AppsR, Close as Cls, Layer as Lay } from 'grommet-icons'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { NavigationBarData } from './Data';
+import { NavigationBarData } from '../Data';
 import { mobile } from '../responsive';
 
 const Layer = styled(Lay)`

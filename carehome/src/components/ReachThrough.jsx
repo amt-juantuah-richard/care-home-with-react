@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
-import { OtherImages } from './Data';
+import { OtherImages } from '../Data';
 import { Link } from 'react-router-dom';
 
 export const SmallContain = styled.div`

@@ -1,41 +1,39 @@
-import { ArrowRightAltOutlined, PictureAsPdfOutlined } from '@mui/icons-material';
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { BannerImages } from './Data';
+import { BannerImages, Feedbacks } from '../Data';
 import { Carousel } from 'grommet';
 import { Author, Box, Title, Words, WordBox } from './Feedback';
-import { Feedbacks } from './Data';
 import { Star, StarHalf } from 'grommet-icons';
 import { mobile } from '../responsive';
 
-const Span = styled.span`
-    transition: margin 1300ms;
-    cursor: pointer;
-    &:hover {
-        color: var(--color-purple);
-        font-weight: 800;
-    }
-`;
+// const Span = styled.span`
+//     transition: margin 1300ms;
+//     cursor: pointer;
+//     &:hover {
+//         color: var(--color-purple);
+//         font-weight: 800;
+//     }
+// `;
 
-const ImageSide = styled.div`
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    background-color: var(--color-bg);
-    border-radius: 0 20px 0 20px;
-    bottom: -15px;
-    left: -15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 500ms;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
-    box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
-    &:hover ${Span}{
-        margin-right:10px;
-    }
-`;
+// const ImageSide = styled.div`
+//     width: 200px;
+//     height: 100px;
+//     position: absolute;
+//     background-color: var(--color-bg);
+//     border-radius: 0 20px 0 20px;
+//     bottom: -15px;
+//     left: -15px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     transition: all 500ms;
+//     -webkit-box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
+//     -moz-box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
+//     box-shadow: 10px 10px 5px 0px rgba(97,27,75,1);
+//     &:hover ${Span}{
+//         margin-right:10px;
+//     }
+// `;
 
 
 const Container = styled.div`
@@ -51,12 +49,12 @@ const Container = styled.div`
     })}
 `;
 
-const BannerSection = styled.div`
-    flex: 1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-`;
+// const BannerSection = styled.div`
+//     flex: 1;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+// `;
 
 // const ImageBox = styled.div`
 //     background-color: #fff;
@@ -81,29 +79,29 @@ const BannerSection = styled.div`
 //     padding-right: 25px;
 // `;
 
-const HeadWord = styled.h1`
-`;
+// const HeadWord = styled.h1`
+// `;
 
-const Para = styled.p`
-    line-height: 28px;
-`;
+// const Para = styled.p`
+//     line-height: 28px;
+// `;
 
-const DownloadButtom = styled.button`
-    height: 80px;
-    width: 180px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    background-color: var(--color-purple);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-bg);
-    &:hover {
-        color: var(--color-purple);
-        background-color: var(--color-bg);
-    }
-`;
+// const DownloadButtom = styled.button`
+//     height: 80px;
+//     width: 180px;
+//     border: none;
+//     outline: none;
+//     border-radius: 8px;
+//     background-color: var(--color-purple);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     color: var(--color-bg);
+//     &:hover {
+//         color: var(--color-purple);
+//         background-color: var(--color-bg);
+//     }
+// `;
 
 const ContentBox = styled.div`
     height: 100%;

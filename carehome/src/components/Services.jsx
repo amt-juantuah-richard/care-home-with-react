@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
-import { ServicesData } from './Data';
+import { ServicesData } from '../Data';
 
 const Container = styled.div`
     height: auto;
@@ -56,7 +56,7 @@ const WordBox = styled.div`
     flex-flow: column;
     padding: 12px 0;
     transition: all 300ms;
-    gap: 12px;
+    justify-content: space-between;
 `;
 
 const Title = styled.span`
@@ -66,7 +66,7 @@ const Title = styled.span`
 `;
 
 const Words = styled.p`
-    font-size: 22px;
+    font-size: 16px;
 `;
 
 const Card = styled.div`
@@ -103,6 +103,8 @@ const Card = styled.div`
 
 const HeadTitle = styled.h2`
     margin-bottom: 5px;
+    padding-left: 10px;
+    border-left: 5px solid var(--color-orange);
 `;
 
 export const LightNote = styled.span`
@@ -126,8 +128,10 @@ function Services() {
                         <CardImage style={{backgroundImage: `url(${item.image})`}} />
                         <WordBox>
                             <Title>{item.title}</Title>
-                            <Words>{item.about}</Words>
-                            <Link to={item.path}><Explore>Explore</Explore></Link>
+                            <Words>{item.about.substring(0,50)}...</Words>
+                            <Link to={item.path}
+                                  state={{itemID: item.id}}
+                            ><Explore>Explore</Explore></Link>
                         </WordBox>
                     </Card>
                 )

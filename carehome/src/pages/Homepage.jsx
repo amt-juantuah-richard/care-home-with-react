@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Services from '../components/Services';
 import Why from '../components/Why';
+import About from '../components/About';
 
 const Container = styled.div``;
 
@@ -14,6 +15,7 @@ function Homepage() {
     <Container>
       <Navbar />
       <Banner />
+      <About />
       <Services />
       <Why />
       <Footer />

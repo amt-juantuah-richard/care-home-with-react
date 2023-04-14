@@ -1,9 +1,8 @@
-import { AssignmentTurnedInOutlined, TaskAltOutlined, VerifiedOutlined } from '@mui/icons-material';
+import { TaskAltOutlined } from '@mui/icons-material';
 import React from 'react'
-import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { mobile } from '../responsive';
-import { OtherImages, WhyUs } from './Data';
+import { WhyUs } from '../Data';
 import ReachThrough from './ReachThrough';
 import { LightNote } from './Services';
 import SquareBox from './SquareBox';

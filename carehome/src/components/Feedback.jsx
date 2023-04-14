@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Carousel } from 'grommet';
 import { mobile } from '../responsive';
-import { Feedbacks } from './Data';
+import { Feedbacks } from '../Data';
 
 
 const Container = styled.div`
@@ -67,7 +67,7 @@ export const WordBox = styled.div`
         width: "100%",
         height: "40%",
         top: "35%"
-    })}
+    })};
 `;
 
 export const Title = styled.span`
@@ -84,7 +84,7 @@ export const Words = styled.p`
     font-style: italic;
     ${mobile({
         fontSize: "15px"
-    })}
+    })};
 `;
 
 export const Author = styled.span`

@@ -29,6 +29,7 @@ body {
   height: auto;
   overflow-x: hidden;
   color: #000000b8;
+  transition: all 300ms;
 }
 
 button {

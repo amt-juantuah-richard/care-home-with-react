@@ -235,12 +235,7 @@ const WhitePara = styled.p`
 
 function Footer() {
 
-    const Comms = [
-        <Facebook color='plain' size='large'/>, 
-        <Twitter color='plain' size='large'/>, 
-        <Instagram color='plain' size='large'/>, 
-        <Linkedin color='plain' size='large'/>
-    ]
+    
   return (
     <>
         <TopWhite>
