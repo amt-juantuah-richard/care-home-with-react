@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
 import { ServicesData } from '../Data';
@@ -113,14 +113,14 @@ const HeadTitle = styled.h2`
     })};
 `;
 
-const Info = styled.h1`
-    color: var(--color-purple);
-    text-align: center;
-    width: 80vw;
-    height: auto;
-    border-left: 5px solid gold;
-    padding-left: 10px;
-`;
+// const Info = styled.h1`
+//     color: var(--color-purple);
+//     text-align: center;
+//     width: 80vw;
+//     height: auto;
+//     border-left: 5px solid gold;
+//     padding-left: 10px;
+// `;
 
 const About = styled.h3`
     font-size: 18px;
@@ -162,12 +162,13 @@ const ListItem = styled.li`
 function ServicesDetail() {
     const location = useLocation();
     const itemID = location.state.itemID;
-    const itemHere = location.pathname.split("/")[1];
+    // const itemHere = location.pathname.split("/")[1];
+    const navigate = useNavigate();
 
   return (
     <Container>
         {
-        itemID >= 0 ?
+        parseInt(itemID) >= 0 ?
         <>
             <HeadSection>
                 <Servicer>
@@ -195,7 +196,7 @@ function ServicesDetail() {
             </Main>
         </>
         :
-            <Info>Page under construction. Visit Soon for Content!!!</Info>
+            navigate("/")
 
         }
     </Container>

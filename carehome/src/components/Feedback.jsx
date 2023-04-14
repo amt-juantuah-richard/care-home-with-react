@@ -74,6 +74,10 @@ export const Title = styled.span`
     text-transform: uppercase;
     font-family: monospace;
     font-size: 14px;
+    font-weight: 700;
+    ${mobile({
+        fontSize: "15px",
+    })};
 `;
 
 export const Words = styled.p`
@@ -83,7 +87,8 @@ export const Words = styled.p`
     font-family: Georgia, serif;
     font-style: italic;
     ${mobile({
-        fontSize: "15px"
+        fontSize: "15px",
+        fontWeight: "600"
     })};
 `;
 

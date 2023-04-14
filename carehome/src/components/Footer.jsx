@@ -42,7 +42,7 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     overflow: hidden;
-    padding: 160px 50px 0 50px;
+    padding: 100px 50px 0 50px;
     display: flex;
     justify-content: space-between;
     flex-flow: column;
