@@ -283,7 +283,9 @@ function Navbar() {
                 <><KeyboardArrowDownOutlined /> 
                 <MenuDrop>
                   {item.subs.map((sub, idx) => (
-                    <Link to={sub.path}><MenuDropItem key={idx}>{sub.name}</MenuDropItem></Link>
+                    <Link to={sub.path}
+                          state={{itemID: sub.id}}
+                    ><MenuDropItem key={idx}>{sub.name}</MenuDropItem></Link>
                   ))}
                 </MenuDrop></>
                 : ''}
@@ -304,7 +306,8 @@ function Navbar() {
                   { item.subs.length ?  
                   <MenuDrop>
                     {item.subs.map((sub, idx) => (
-                      <Link to={sub.path}><MenuDropItem key={idx}>{sub.name}</MenuDropItem></Link>
+                      <Link to={sub.path}
+                      state={{itemID: sub.id}}><MenuDropItem key={idx}>{sub.name}</MenuDropItem></Link>
                     ))}
                   </MenuDrop>
                   : ''}
