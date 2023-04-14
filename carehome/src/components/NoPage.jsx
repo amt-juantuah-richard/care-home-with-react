@@ -12,13 +12,15 @@ const Container = styled.div`
 `;
 
 const ConstructionImageDiv = styled.div`
-    width: 100%;
-    aspect-ratio: 2/1;
+    width: 80%;
+    aspect-ratio: 1/1;
+    margin: auto;
     margin-top: 15px;
     border-radius: 6px;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 const About = styled.h3`
