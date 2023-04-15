@@ -1,9 +1,10 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { mobile } from '../responsive';
 import { ServicesData } from '../Data';
 import { Services } from 'grommet-icons';
+import { ArrowDownwardRounded } from '@mui/icons-material';
 
 const Container = styled.div`
     height: auto;
@@ -102,14 +103,120 @@ const Main = styled.div`
     padding: 45px ;
     ${mobile({
         padding: "30px 20px",
-	width: "100%",
+	    width: "100%",
     })}
+`;
+
+const OtherServices = styled.div`
+    height: auto;
+    margin: 30px auto;
+    width: calc(100% - 280px);
+    padding-left: 45px ;
+    display: flex;
+    gap: 45px;
+    flex-flow: row;
+    ${mobile({
+        padding: "0",
+        gap: "20px",
+	    width: "100%",
+        flexFlow: "column",
+    })}
+`;
+
+const OtherServicesDivLeft = styled.div`
+    display: flex;
+    flex-flow: column;
+    align-items: left;
+    flex: 1;
+    height: auto;
+`;
+
+const OtherServicesDivRight = styled.div`
+    display: flex;
+    flex-flow: column;
+    align-items: left;
+    flex: 1.5;
+    transition: all 0.4s;
+    height: auto;
+    overflow: hidden;
+`;
+
+const Liner = styled.div`
+    height: 3px;
+    background-color: gold;
+    width: 0px;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+`;
+
+const OtherServicesItem = styled.div`
+    width: 95%;
+    height: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: var(--color-purple);
+    color: #ffffff;
+    transition: width 0.2s ease-in-out, height 0.5s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    &:hover ${Liner} {
+        width: 100%;
+    };
+    &:hover {
+        width: 100%;
+    };
+`;
+
+const OpenOtherItem = styled.div`
+    width: 100%;
+    height: 40px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 1px;
+    flex-flow: row;
+    padding-left: 15px;
+    border-radius: 20px;
+    justify-content: space-between;
+    border: 2px solid var(--color-purple);
+    color: var(--color-purple);
+    position: relative;
+    overflow: hidden;
+`;
+const OpenIcon = styled.div`
+    height: 100%;
+    width: 70px;
+    background-color: #611b4b70;
+    display: flex;
+    border-radius: 20px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    & svg {
+        color: #fff;
+        transition: all 400ms;
+    };
+    &:hover {
+        background-color: var(--color-purple);
+    }
 `;
 
 const HeadTitle = styled.h2`
     color: #ffffff;
     ${mobile({
-	fontSize: "20px",
+	    fontSize: "20px",
     })};
 `;
 
@@ -162,8 +269,12 @@ const ListItem = styled.li`
 function ServicesDetail() {
     const location = useLocation();
     const itemID = location.state.itemID;
+    const [others, setOthers] = useState(false);
     // const itemHere = location.pathname.split("/")[1];
-    const navigate = useNavigate();
+
+    const handleOthers = () => {
+        setOthers(others === false ? true : false);
+    }
 
   return (
     <Container>
@@ -178,7 +289,7 @@ function ServicesDetail() {
                     <HeadTitle>{ServicesData[itemID].title}</HeadTitle>
                 </TitleSection>
             </HeadSection>
-	    <PictureDiv style={{backgroundImage: `url(${ServicesData[itemID].image})`}} />
+	        <PictureDiv style={{backgroundImage: `url(${ServicesData[itemID].image})`}} />
             <Main>
                 <About>{ServicesData[itemID].about}</About >
                 {
@@ -194,9 +305,25 @@ function ServicesDetail() {
                     </div>)
                 }
             </Main>
+            <OtherServices>
+                <OtherServicesDivLeft>
+                    <OpenOtherItem onClick={handleOthers}>
+                        See other Services
+                        <OpenIcon>
+                            <ArrowDownwardRounded style={{transform: `${others ? "rotate(180deg)" : ""}`}}/>
+                        </OpenIcon>
+                    </OpenOtherItem>
+                </OtherServicesDivLeft>
+                <OtherServicesDivRight>
+                    {
+                        ServicesData.filter(item => item.id !== itemID).map((item, index) => <Link to={item.path}
+                        state={{itemID: item.id}}><OtherServicesItem style={{height: `${others ? "40px" : "0px"}`}} key={index}>{item.title} <Liner /></OtherServicesItem></Link>)
+                    }
+                </OtherServicesDivRight>
+            </OtherServices>
         </>
         :
-            navigate("/")
+            ""
 
         }
     </Container>
