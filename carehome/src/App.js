@@ -29,6 +29,7 @@ function App() {
         chatMessage={`Hello there! \nWelcome to Jo2Jos 🤗\nHow can we help you?`}
         placeholder='Type a message to Jo2Jos'
       />
+      
     </div>
   );
 }

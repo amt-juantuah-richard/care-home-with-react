@@ -285,7 +285,7 @@ function Footer() {
                 <BigLetter>JO2JOS</BigLetter>
             </Bottom>
         </Container>
-        <Copyright><Para>Copyright © 2023 - 2025 by <b style={{color: "gold"}}>OJ & Bridge Code House</b>, all rights reserved.<br/>Kumasi (nanamcroj@gmail.com)</Para></Copyright>
+        <Copyright><Para>Copyright © 2023 - 2025 by <b style={{color: "gold"}}>OJ & Bridge Code House</b>, all rights reserved.<br/>Kumasi - Ghana</Para></Copyright>
     </>
   )
 }

@@ -98,7 +98,11 @@ const Card = styled.div`
     };
     &:hover ${CardImage} {
         background-position: top;
-    }
+    };
+    ${mobile({
+	width: "100%",
+	height: "360px",
+    })}
 `;
 
 const HeadTitle = styled.h2`

@@ -7,7 +7,9 @@ import Services from '../components/Services';
 import Why from '../components/Why';
 import About from '../components/About';
 
-const Container = styled.div``;
+const Container = styled.div`
+    position: relative;
+`;
 
 function Homepage() {
   

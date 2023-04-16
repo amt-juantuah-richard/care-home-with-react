@@ -45,7 +45,7 @@ const Container = styled.div`
     // display: flex;
     ${mobile({
         borderRadius: 0,
-        padding: "0 25px"
+        padding: "0"
     })}
 `;
 

@@ -112,11 +112,13 @@ const MenuItem = styled.div`
   gap: 1px;
   position: relative;
   transition: all 500ms;
+  transition: border-bottom 0ms;
   & a ${Para} {
     color: #424243;
   };
   &:hover {
     background-color: #611b4b;
+    border-bottom: 4px solid gold;
     color: aliceblue;
     & a ${Para} {
       color: var(--color-bg);
