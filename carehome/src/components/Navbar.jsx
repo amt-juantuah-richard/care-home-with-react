@@ -1,17 +1,18 @@
 import { KeyboardArrowDownOutlined, KeyboardArrowLeftOutlined, Phone } from '@mui/icons-material';
-import { AppsRounded as AppsR, Close as Cls, Layer as Lay } from 'grommet-icons';
+import { AppsRounded as AppsR, Close as Cls } from 'grommet-icons';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { NavigationBarData } from '../Data';
 import { mobile } from '../responsive';
+import image from '../assets/hart.avif'
 
-const Layer = styled(Lay)`
-  ${mobile({
-    height: "38px",
-    width: "38px"
-  })}
-`;
+// const Layer = styled(Lay)`
+//   ${mobile({
+//     height: "38px",
+//     width: "38px"
+//   })}
+// `;
 
 const AppsRounded = styled(AppsR)`
   ${mobile({
@@ -263,7 +264,7 @@ function Navbar() {
           <LogoContain>
             <Link to={"/"}>
               <Logo>
-                <Layer size='large' />
+	 	<img style={{borderRadius: "50%", height:"50px", width:"50px"}} src={image} alt='logo'/>
                 <Name><Span>Jo2Jos</Span> <br/> Service</Name>
               </Logo>
             </Link>
