@@ -1,4 +1,4 @@
-import { KeyboardArrowDownOutlined, KeyboardArrowLeftOutlined, Phone } from '@mui/icons-material';
+import { CloseOutlined, KeyboardArrowDownOutlined, KeyboardArrowLeftOutlined, Phone } from '@mui/icons-material';
 import { AppsRounded as AppsR, Close as Cls } from 'grommet-icons';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -57,6 +57,7 @@ const Left = styled.div`
 const Right = styled.div`
   height: 100%;
   flex: 0.7;
+  position: relative;
 `;
 
 const MenuBox = styled.div`
@@ -128,6 +129,91 @@ const MenuItem = styled.div`
     };
   }
 `;
+
+const SideModal = styled.div`
+  width: 110vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  margin-left: -10vw;
+  display: block;
+  z-index: 4;
+  background-color: rgb(5 5 5 / 55%);
+`;
+const Image = styled.img`
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+`;
+
+const ModalWrapper = styled.div`
+  height: 100vh;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  padding-left: 10%;
+  padding-top: 5%;
+  padding-right: 5%;
+  background-color: var(--color-bg);
+  border-right: 4px solid gold;
+  & ${Image} {
+    position: absolute;
+    right: -25px;
+    top: 30vw;
+    border: 4px solid gold;
+  };
+  ${mobile({
+    width: "90vw",
+    paddingTop: "15%",
+    paddingLeft: "5%",
+  })}
+`;
+
+
+const CloseModal = styled(CloseOutlined)`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  padding: 5px;
+  background-color: grey;
+  border-radius: 50%;
+  margin-top: 10px;
+  &:hover {
+    background-color: red;
+  }
+`;
+
+
+const ModalNavigator = styled.div`
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-flow: row;
+  gap: 10px;
+  border-bottom: 1px solid #9e8e99;
+  border-top: 1px solid #9e8e99;
+  ${mobile({
+    height: "40px",
+    gap: "3px",
+  })};
+  & button {
+    flex: 1 1 0%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: 600;
+    border-left: 1px solid #00000036;
+    border-right: 1px solid #00000036;
+    ${mobile({
+      fontSize: "11px",
+    })};
+  }
+`;
+
+const Button = styled.button``;
 
 
 const Name = styled.h2`
@@ -256,17 +342,121 @@ const Span = styled.span`
   color: steelblue !important;
 `;
 
+const NavOneSection = styled.div`
+  transition: all 400ms;
+`;
+const NavTwoSection = styled.div`
+  transition: all 400ms;
+`;
+const NavThreeSection = styled.div`
+  transition: all 400ms;
+`;
+const NavFourSection = styled.div`
+  transition: all 400ms;
+`;
+
 function Navbar() {
   const [menuIcon, setMenuIcon] = useState('close');
+  const [navOne, setNavOne] = useState(false);
+  const [navTwo, setNavTwo] = useState(false);
+  const [navThree, setNavThree] = useState(false);
+  const [navFour, setNavFour] = useState(false);
+  const [sideNav, setSideNav] = useState(true);
+  
+
+  const handleNavOne = () => {
+    setNavOne(true);
+    setNavTwo(false);
+    setNavThree(false);
+    setNavFour(false);
+  }
+
+  const handleNavTwo = () => {
+    setNavOne(false);
+    setNavTwo(true);
+    setNavThree(false);
+    setNavFour(false);
+  }
+
+  const handleNavThree = () => {
+    setNavOne(false);
+    setNavTwo(false);
+    setNavThree(true);
+    setNavFour(false);
+  }
+
+  const handleNavFour = () => {
+    setNavOne(false);
+    setNavTwo(false);
+    setNavThree(false);
+    setNavFour(true);
+  }
+
+  const handleSideNav = () => {
+    setSideNav(false);
+  };
+
+  const handleModalClose = (e) => {
+    const modal = document.getElementById('navmodal');
+    if (e.target === modal) handleSideNav();
+  };
   
   return (
     <Container>
+      <SideModal id='navmodal' onClick={(e) => handleModalClose(e)} style={{display: `${sideNav ? "block" : "none"}`}}>
+          <ModalWrapper>
+            <ModalNavigator>
+              <Button 
+                style={{
+                  borderBottom: `${navOne ? '4px solid gold' : 'none'}`,
+                  backgroundColor: `${navOne ? '#ffd7003b' : '#611b4b4a'}`
+                }} 
+                onClick={handleNavOne}
+              >Contact</Button>
+              <Button 
+                style={{
+                  borderBottom: `${navTwo ? '4px solid gold' : 'none'}`,
+                  backgroundColor: `${navTwo ? '#ffd7003b' : '#611b4b4a'}`
+                }}
+                onClick={handleNavTwo}
+              >About</Button>
+              <Button 
+                style={{
+                  borderBottom: `${navThree ? '4px solid gold' : 'none'}`,
+                  backgroundColor: `${navThree ? '#ffd7003b' : '#611b4b4a'}`
+                }}
+                onClick={handleNavThree}
+              >Support</Button>
+              <Button 
+                style={{
+                  borderBottom: `${navFour ? '4px solid gold' : 'none'}`,
+                  backgroundColor: `${navFour ? '#ffd7003b' : '#611b4b4a'}`
+                }}
+                onClick={handleNavFour}
+              >News</Button>
+            </ModalNavigator>
+            <NavOneSection style={{display: `${navOne ? 'flex' : 'none'}`}}>
+              Nav One
+            </NavOneSection>
+            <NavTwoSection style={{display: `${navTwo ? 'flex' : 'none'}`}}>
+              Nav Two
+            </NavTwoSection>
+            <NavThreeSection style={{display: `${navThree ? 'flex' : 'none'}`}}>
+              Nav Three
+            </NavThreeSection>
+            <NavFourSection style={{display: `${navFour ? 'flex' : 'none'}`}}>
+              Nav Four
+            </NavFourSection>
+            <CloseModal onClick={handleSideNav}/>
+            <Image src={image} alt="logo"/>
+          </ModalWrapper>
+      </SideModal>
       <Wrapper>
         <Left>
           <LogoContain>
             <Link to={"/"}>
               <Logo>
-	 	<img style={{borderRadius: "50%", height:"50px", width:"50px"}} src={image} alt='logo'/>
+	 	<Image src={image} alt='logo'/>
                 <Name><Span>Jo2Jos</Span> <br/> Service</Name>
               </Logo>
             </Link>
