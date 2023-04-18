@@ -14,30 +14,30 @@ export const NavigationBarData = [
         path: "/",
         subs: [],
     },
+    // {
+    //     id: 1,
+    //     name: "About",
+    //     path: "/about",
+    //     subs: [
+    //         {
+    //             id: 0,
+    //             name: "Our Organization",
+    //             path: "/about/organization"
+    //         },
+    //         {
+    //             id: 1,
+    //             name: "Values & Objectives",
+    //             path: "/about/values"
+    //         },
+    //         {
+    //             id: 2,
+    //             name: "Who We Support",
+    //             path: "/about/who-we-support"
+    //         }
+    //     ]
+    // },
     {
         id: 1,
-        name: "About",
-        path: "/about",
-        subs: [
-            {
-                id: 0,
-                name: "Our Organization",
-                path: "/about/organization"
-            },
-            {
-                id: 1,
-                name: "Values & Objectives",
-                path: "/about/values"
-            },
-            {
-                id: 2,
-                name: "Who We Support",
-                path: "/about/who-we-support"
-            }
-        ]
-    },
-    {
-        id: 2,
         name: "Services",
         path: "/services",
         subs: [
@@ -84,7 +84,7 @@ export const NavigationBarData = [
         ]
     },
     {
-        id: 3,
+        id: 2,
         name: "More",
         path: "/more",
         subs: [

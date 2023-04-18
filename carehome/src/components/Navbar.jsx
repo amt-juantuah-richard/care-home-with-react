@@ -52,6 +52,8 @@ const Left = styled.div`
   flex: 1.3;
   text-align: start;
   position: relative;
+  display: flex;
+  flex-flow: row;
 `;
 
 const Right = styled.div`
@@ -205,8 +207,10 @@ const ModalNavigator = styled.div`
     outline: none;
     font-size: 12px;
     font-weight: 600;
-    border-left: 1px solid #00000036;
-    border-right: 1px solid #00000036;
+    // border-left: 1px solid #00000036;
+    // border-right: 1px solid #00000036;
+    // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     ${mobile({
       fontSize: "11px",
     })};
@@ -234,7 +238,6 @@ const Logo = styled.div`
 `;
 
 const LogoContain = styled.div`
-  position: absolute;
   width: 200px;
   height: 100px;
   background-color: #611b4b;
@@ -242,10 +245,41 @@ const LogoContain = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: -30px;
+  margin-top: 39px;
   ${mobile({
     width: "150px",
-    height: "90px"
+  })}
+`;
+
+const SideNavOpener = styled.div`
+  width: 150px;
+  height: 60px;
+  border-radius: 4px;
+  border: 2px solid gold;
+  margin-left: 15px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
+  margin-top: 39px;
+  cursor: pointer;
+  & span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-purple);
+    border-bottom: 2px solid gold;
+    padding-bottom: 2px;
+    &:hover {
+      border-bottom: 2px solid var(--color-purple);
+    };
+    ${mobile({
+      fontSize: "11px",
+    })}
+  };
+  ${mobile({
+    marginLeft: "5px",
+    width: "100px",
   })}
 `;
 
@@ -361,7 +395,7 @@ function Navbar() {
   const [navTwo, setNavTwo] = useState(false);
   const [navThree, setNavThree] = useState(false);
   const [navFour, setNavFour] = useState(false);
-  const [sideNav, setSideNav] = useState(true);
+  const [sideNav, setSideNav] = useState(false);
   
 
   const handleNavOne = () => {
@@ -393,7 +427,7 @@ function Navbar() {
   }
 
   const handleSideNav = () => {
-    setSideNav(false);
+    setSideNav(sideNav === true ? false : true);
   };
 
   const handleModalClose = (e) => {
@@ -445,7 +479,7 @@ function Navbar() {
               Nav Three
             </NavThreeSection>
             <NavFourSection style={{display: `${navFour ? 'flex' : 'none'}`}}>
-              Nav Four
+              No news item at the moment
             </NavFourSection>
             <CloseModal onClick={handleSideNav}/>
             <Image src={image} alt="logo"/>
@@ -456,7 +490,7 @@ function Navbar() {
           <LogoContain>
             <Link to={"/"}>
               <Logo>
-	 	<Image src={image} alt='logo'/>
+	 	            <Image src={image} alt='logo'/>
                 <Name><Span>Jo2Jos</Span> <br/> Service</Name>
               </Logo>
             </Link>
@@ -465,6 +499,10 @@ function Navbar() {
               <Tel href='tel:01473316966'>01473316966</Tel>
             </LogoDown>
           </LogoContain>
+          <SideNavOpener onClick={handleSideNav}>
+            <Para>About</Para>
+            <Para>Contact</Para>
+          </SideNavOpener>
         </Left>
         <Right>
           <MenuBox>
