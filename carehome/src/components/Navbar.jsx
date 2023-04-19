@@ -384,12 +384,22 @@ const Span = styled.span`
 
 const NavOneSection = styled.div`
   transition: all 500ms;
-  margin-top: 10%;
+  margin-top: 20px;
   padding-left: 10%;
   padding-bottom: 10%;
   overflow: auto;
   height: auto;
   flex-flow: column;
+  & ${Image} {
+      width: 80%;
+      aspect-ratio: 1 / 1;
+      margin: auto;
+      border-radius: 6px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
 `;
 const NavTwoSection = styled(NavOneSection)``;
 const NavThreeSection = styled(NavOneSection)``;
@@ -416,6 +426,7 @@ const ContactDetails = styled.div`
   align-items: center;
   gap: 5px;
   margin-bottom: 15px;
+  margin-up: -5px;
   & a {
     color: var(--color-purple);
     transition: all 300ms;
@@ -535,26 +546,31 @@ function Navbar() {
                 <Para>United Kingdom <br/>76 Jovian Way <br/>Suffolk, IP1 5AT</Para>
               </ContactDetails>
               <HeadTitle><b>To Reach Our Office Line</b></HeadTitle>
-              <Para><b>Call</b></Para>              
+                         
               <ContactDetails>
+                <Para><b>Call:</b></Para>
                 <FcPhone style={{height: "30px", width: "30px"}}/>
                 <Para><a href='tel:01473316966'>01473316966</a></Para>
               </ContactDetails>
               <HeadTitle><b>To Reach Us on Mobile</b></HeadTitle>
-              <Para><b>Call</b></Para>              
+                            
               <ContactDetails>
+                <Para><b>Call:</b></Para>
                 <FcIphone style={{height: "30px", width: "30px"}}/>
                 <Para><a href='tel:01473316966'>01473316966</a></Para>
               </ContactDetails>
             </NavTwoSection>
             <NavThreeSection style={{display: `${navThree ? 'flex' : 'none'}`}}>
-              Nav Three
+              <HeadTitle><b>Support Us</b></HeadTitle>
+              <Para>To support Jo2Jos Service, please click on the <b>Contact</b> tab</Para>              
             </NavThreeSection>
             <NavFourSection style={{display: `${navFour ? 'flex' : 'none'}`}}>
-              No news item at the moment
+              <HeadTitle><b>No current news items</b></HeadTitle>
+              <Image src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="logo"/>            
             </NavFourSection>
             <CloseModal onClick={handleSideNav}/>
             <Image src={image} alt="logo"/>
+            <Image src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="logo"/>            
           </ModalWrapper>
       </SideModal>
       <Wrapper>
