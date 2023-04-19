@@ -382,6 +382,8 @@ const Span = styled.span`
   color: steelblue !important;
 `;
 
+const ImageRaw = styled.img``;
+
 const NavOneSection = styled.div`
   transition: all 500ms;
   margin-top: 20px;
@@ -390,7 +392,7 @@ const NavOneSection = styled.div`
   overflow: auto;
   height: auto;
   flex-flow: column;
-  & ${Image} {
+  & ${ImageRaw} {
       width: 80%;
       aspect-ratio: 1 / 1;
       margin: auto;
@@ -401,6 +403,7 @@ const NavOneSection = styled.div`
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
+
 const NavTwoSection = styled(NavOneSection)``;
 const NavThreeSection = styled(NavOneSection)``;
 const NavFourSection = styled(NavOneSection)``;
@@ -570,7 +573,7 @@ function Navbar() {
             </NavFourSection>
             <CloseModal onClick={handleSideNav}/>
             <Image src={image} alt="logo"/>
-            <Image src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="logo"/>            
+            <ImageRaw src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="logo"/>            
           </ModalWrapper>
       </SideModal>
       <Wrapper>
