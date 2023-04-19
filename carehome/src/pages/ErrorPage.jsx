@@ -9,7 +9,8 @@ import NoPage from '../components/NoPage';
 
 function ErrorPage() {
   const location = useLocation();
-  const locString = location.split("/")[-1];
+  let pathSepereted = location.split("/");
+  const locString = pathSepereted[pathSepereted.length - 1];
   useTitle(`Jo2Jos | ${locString} | Error`);
   return (
     <>
