@@ -138,7 +138,7 @@ const SideModal = styled.div`
   height: 100vh;
   position: fixed;
   top: 0;
-  margin-left: -10vw;
+  margin-left: -5vw;
   display: block;
   z-index: 4;
   background-color: rgb(5 5 5 / 55%);
@@ -150,12 +150,11 @@ const Image = styled.img`
 `;
 
 const ModalWrapper = styled.div`
-  min-height: 100vh;
+  height: 100%;
   width: 50%;
   position: relative;
   display: flex;
   flex-flow: column;
-  padding-left: 10%;
   padding-top: 5%;
   padding-right: 5%;
   background-color: var(--color-bg);
@@ -167,9 +166,8 @@ const ModalWrapper = styled.div`
     border: 4px solid gold;
   };
   ${mobile({
-    width: "90vw",
+    width: "85vw",
     paddingTop: "15%",
-    paddingLeft: "5%",
   })}
 `;
 
@@ -191,8 +189,10 @@ const CloseModal = styled(CloseOutlined)`
 
 
 const ModalNavigator = styled.div`
-  width: 100%;
+  width: 90%;
   height: 40px;
+  position: absolute;
+  left: 12px;
   display: flex;
   flex-flow: row;
   gap: 7px;
@@ -206,6 +206,7 @@ const ModalNavigator = styled.div`
     flex: 1 1 0%;
     height: 100%;
     border: none;
+    color: var(--color-purple);
     outline: none;
     font-size: 12px;
     font-weight: 600;
@@ -383,9 +384,9 @@ const Span = styled.span`
 
 const NavOneSection = styled.div`
   transition: all 500ms;
-  padding-top: 10%;
+  margin-top: 10%;
   padding-left: 10%;
-  padding-down: 10%;
+  padding-bottom: 10%;
   overflow: auto;
   height: auto;
   flex-flow: column;
@@ -401,11 +402,27 @@ const HeadTitle = styled.h3`
 `;
 
 const UList = styled.ul`
+  margin-top: 30px;
 `;
 
 const List = styled.li`
     line-height: 34px;
     margin-left: 15px;
+`;
+
+const ContactDetails = styled.div`
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  & a {
+    color: var(--color-purple);
+    transition: all 300ms;
+    &:hover {
+      border-bottom: 1px solid gold;
+    }
+  }
 `;
 
 function Navbar() {
@@ -512,22 +529,23 @@ function Navbar() {
             </NavOneSection>
             <NavTwoSection style={{display: `${navTwo ? 'flex' : 'none'}`}}>
               <HeadTitle><b>To Visit Our Office Location</b></HeadTitle>
-              <div style={{display: "flex", flexFlow: "row"}}>
+              <Para><b>Our office is opened<br /> Monday - Friday: 8:30am to 5pm</b></Para>
+              <ContactDetails>
                 <FcHome style={{height: "30px", width: "30px"}}/>
                 <Para>United Kingdom <br/>76 Jovian Way <br/>Suffolk, IP1 5AT</Para>
-              </div>
-              <br /><br /><br/>
+              </ContactDetails>
               <HeadTitle><b>To Reach Our Office Line</b></HeadTitle>
-              <div style={{display: "flex", flexFlow: "row"}}>
+              <Para><b>Call</b></Para>              
+              <ContactDetails>
                 <FcPhone style={{height: "30px", width: "30px"}}/>
                 <Para><a href='tel:01473316966'>01473316966</a></Para>
-              </div>
-              <br /><br /><br />
+              </ContactDetails>
               <HeadTitle><b>To Reach Us on Mobile</b></HeadTitle>
-              <div style={{display: "flex", flexFlow: "row"}}>
+              <Para><b>Call</b></Para>              
+              <ContactDetails>
                 <FcIphone style={{height: "30px", width: "30px"}}/>
                 <Para><a href='tel:01473316966'>01473316966</a></Para>
-              </div>
+              </ContactDetails>
             </NavTwoSection>
             <NavThreeSection style={{display: `${navThree ? 'flex' : 'none'}`}}>
               Nav Three

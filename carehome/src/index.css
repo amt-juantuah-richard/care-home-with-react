@@ -48,4 +48,5 @@ a {
 a, p, span, li {
   line-height: 25px;
   letter-spacing: 0.3px;
+  font-size: 15px;
 }
