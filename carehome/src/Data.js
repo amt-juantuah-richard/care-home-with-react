@@ -115,10 +115,10 @@ export const NavigationBarData = [
 
 export const Feedbacks = [
     {
-        image: 'https://images.unsplash.com/photo-1534614971-6be99a7a3ffd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+        image: 'https://images.unsplash.com/photo-1615891081220-9116de3e1afd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
         words: 'I love the reception of the staff. I truly felt at home',
-        name: 'Ron Cooper',
-        about: 'Business Director'
+        name: 'Gifty Adole',
+        about: 'Marketing Executive'
     },
     {
         image: 'https://images.unsplash.com/photo-1602233158242-3ba0ac4d2167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80',
@@ -127,9 +127,9 @@ export const Feedbacks = [
         about: 'Past Resident'
     },
     {
-        image: 'https://images.unsplash.com/photo-1589199051919-52f5af09d5a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80',
+        image: 'https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
         words: 'All I can say is, thank you for my brother. He is doing very well now. His name is Kwame. The whole family is grateful',
-        name: 'Aku Sika Jones',
+        name: 'Sika Jones',
         about: 'University Student'
     },
     {
@@ -139,7 +139,7 @@ export const Feedbacks = [
         about: 'Manager of a Cafe Shop'
     },
     {
-        image: 'https://images.unsplash.com/photo-1604882737274-4afaddefec9b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
+        image: 'https://images.unsplash.com/photo-1627199219038-e8263f729e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80',
         words: 'I am glad to say I am free from my addiction, thanks to them. Till date I still get reminders from them to keep me off from my addiction',
         name: 'Culpa Rost.',
         about: 'Artist and Gardener'

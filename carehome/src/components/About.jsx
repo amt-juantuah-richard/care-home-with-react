@@ -27,6 +27,15 @@ const Para = styled.p`
     })};
 `;
 
+const UList = styled.ul`
+    margin: 15px;
+`;
+
+const List = styled.li`
+    line-height: 34px;
+    margin-left: 15px;
+`;
+
 
 function About() {
   return (
@@ -34,8 +43,23 @@ function About() {
         <HeadTitle>Who We Are</HeadTitle>
         <Para>We are a Semi-Supported Independent Living Service Provider. </Para>
         <Para>At <b>Jo2jos</b>, we support young people in ways that help them achieve personally desired outcomes and assist them to direct their own lives in a meaningful way. </Para>
-        <Para>Our objectives are to ensure: service delivery excellence, empowerment for staff, innovation in our services, and foster healthy partnerships with others</Para>
         <Para>Our services are designed to support young people on their pathways to independence. All support is tailored to each person’s individual needs, through structured care and support plan,</Para>
+        <UList>
+            <Para><b>Our objectives:</b></Para>
+            <List>to ensure service delivery excellence</List>
+            <List>to ensure empowerment for staff</List>
+            <List>to ensure innovation in our services</List>
+            <List>to ensure service delivery excellence</List>
+            <List>to foster healthy partnerships with others</List>
+        </UList>
+
+        <UList>
+            <Para><b>Our Values:</b></Para>
+            <List>Compassion</List>
+            <List>Respect</List>
+            <List>Being positive</List>
+            <List>Working together</List>
+        </UList>
     </Container>
   )
 }

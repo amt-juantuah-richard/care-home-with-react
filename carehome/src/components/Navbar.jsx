@@ -1,5 +1,6 @@
 import { CloseOutlined, KeyboardArrowDownOutlined, KeyboardArrowLeftOutlined, Phone } from '@mui/icons-material';
 import { AppsRounded as AppsR, Close as Cls } from 'grommet-icons';
+import { FcHome, FcIphone, FcPhone } from "react-icons/fc";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -149,7 +150,7 @@ const Image = styled.img`
 `;
 
 const ModalWrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 50%;
   position: relative;
   display: flex;
@@ -182,6 +183,7 @@ const CloseModal = styled(CloseOutlined)`
   background-color: grey;
   border-radius: 50%;
   margin-top: 10px;
+  cursor: pointer;
   &:hover {
     background-color: red;
   }
@@ -190,10 +192,10 @@ const CloseModal = styled(CloseOutlined)`
 
 const ModalNavigator = styled.div`
   width: 100%;
-  height: 60px;
+  height: 40px;
   display: flex;
   flex-flow: row;
-  gap: 10px;
+  gap: 7px;
   border-bottom: 1px solid #9e8e99;
   border-top: 1px solid #9e8e99;
   ${mobile({
@@ -252,34 +254,37 @@ const LogoContain = styled.div`
 `;
 
 const SideNavOpener = styled.div`
-  width: 150px;
-  height: 60px;
   border-radius: 4px;
   border: 2px solid gold;
   margin-left: 15px;
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 2px;
-  margin-top: 39px;
-  cursor: pointer;
+  justify-content: center;
+  gap: 3px;
+  height: fit-content;
+  padding: 3px;
+  margin-top: 45px;
   & span {
     font-size: 13px;
+    cursor: pointer;
     font-weight: 600;
-    color: var(--color-purple);
+    color: var(--color-bg);
     border-bottom: 2px solid gold;
-    padding-bottom: 2px;
+    padding: 10px;
+    background-color: var(--color-purple);
+    border-radius: 4px;
     &:hover {
-      border-bottom: 2px solid var(--color-purple);
+      color: gold;
     };
     ${mobile({
       fontSize: "11px",
+      padding: "5px",
+      borderRadius: "2px",
     })}
   };
   ${mobile({
     marginLeft: "5px",
-    width: "100px",
   })}
 `;
 
@@ -377,16 +382,30 @@ const Span = styled.span`
 `;
 
 const NavOneSection = styled.div`
-  transition: all 400ms;
+  transition: all 500ms;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-down: 10%;
+  overflow: auto;
+  height: auto;
+  flex-flow: column;
 `;
-const NavTwoSection = styled.div`
-  transition: all 400ms;
+const NavTwoSection = styled(NavOneSection)``;
+const NavThreeSection = styled(NavOneSection)``;
+const NavFourSection = styled(NavOneSection)``;
+
+const HeadTitle = styled.h3`
+    margin-bottom: 30px;
+    border-left: 5px solid var(--color-orange);
+    padding-left: 15px;
 `;
-const NavThreeSection = styled.div`
-  transition: all 400ms;
+
+const UList = styled.ul`
 `;
-const NavFourSection = styled.div`
-  transition: all 400ms;
+
+const List = styled.li`
+    line-height: 34px;
+    margin-left: 15px;
 `;
 
 function Navbar() {
@@ -446,14 +465,14 @@ function Navbar() {
                   backgroundColor: `${navOne ? '#ffd7003b' : '#611b4b4a'}`
                 }} 
                 onClick={handleNavOne}
-              >Contact</Button>
+              >About</Button>
               <Button 
                 style={{
                   borderBottom: `${navTwo ? '4px solid gold' : 'none'}`,
                   backgroundColor: `${navTwo ? '#ffd7003b' : '#611b4b4a'}`
                 }}
                 onClick={handleNavTwo}
-              >About</Button>
+              >Contact</Button>
               <Button 
                 style={{
                   borderBottom: `${navThree ? '4px solid gold' : 'none'}`,
@@ -468,12 +487,47 @@ function Navbar() {
                 }}
                 onClick={handleNavFour}
               >News</Button>
-            </ModalNavigator>
+            </ModalNavigator><br /><br />
             <NavOneSection style={{display: `${navOne ? 'flex' : 'none'}`}}>
-              Nav One
+              <HeadTitle>About Us</HeadTitle>
+              <Para>We are a Semi-Supported Independent Living Service Provider. </Para>
+              <Para>At <b>Jo2jos</b>, we support young people in ways that help them achieve personally desired outcomes and assist them to direct their own lives in a meaningful way. </Para>
+              <Para>Our services are designed to support young people on their pathways to independence. All support is tailored to each person’s individual needs, through structured care and support plan,</Para>
+              <UList>
+                  <HeadTitle><b>Our objectives:</b></HeadTitle>
+                  <List>to ensure service delivery excellence</List>
+                  <List>to ensure empowerment for staff</List>
+                  <List>to ensure innovation in our services</List>
+                  <List>to ensure service delivery excellence</List>
+                  <List>to foster healthy partnerships with others</List>
+              </UList>
+
+              <UList>
+                  <HeadTitle><b>Our Values:</b></HeadTitle>
+                  <List>Compassion</List>
+                  <List>Respect</List>
+                  <List>Being positive</List>
+                  <List>Working together</List>
+              </UList>
             </NavOneSection>
             <NavTwoSection style={{display: `${navTwo ? 'flex' : 'none'}`}}>
-              Nav Two
+              <HeadTitle><b>To Visit Our Office Location</b></HeadTitle>
+              <div style={{display: "flex", flexFlow: "row"}}>
+                <FcHome style={{height: "30px", width: "30px"}}/>
+                <Para>United Kingdom <br/>76 Jovian Way <br/>Suffolk, IP1 5AT</Para>
+              </div>
+              <br /><br /><br/>
+              <HeadTitle><b>To Reach Our Office Line</b></HeadTitle>
+              <div style={{display: "flex", flexFlow: "row"}}>
+                <FcPhone style={{height: "30px", width: "30px"}}/>
+                <Para><a href='tel:01473316966'>01473316966</a></Para>
+              </div>
+              <br /><br /><br />
+              <HeadTitle><b>To Reach Us on Mobile</b></HeadTitle>
+              <div style={{display: "flex", flexFlow: "row"}}>
+                <FcIphone style={{height: "30px", width: "30px"}}/>
+                <Para><a href='tel:01473316966'>01473316966</a></Para>
+              </div>
             </NavTwoSection>
             <NavThreeSection style={{display: `${navThree ? 'flex' : 'none'}`}}>
               Nav Three
@@ -499,9 +553,9 @@ function Navbar() {
               <Tel href='tel:01473316966'>01473316966</Tel>
             </LogoDown>
           </LogoContain>
-          <SideNavOpener onClick={handleSideNav}>
-            <Para>About</Para>
-            <Para>Contact</Para>
+          <SideNavOpener>
+            <Para onClick={() => {handleSideNav(); handleNavOne()}}>About</Para>
+            <Para onClick={() => {handleSideNav(); handleNavTwo()}}>Contact</Para>
           </SideNavOpener>
         </Left>
         <Right>
