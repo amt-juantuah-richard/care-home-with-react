@@ -262,7 +262,7 @@ const SideNavOpener = styled.div`
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 0.5px;
   height: fit-content;
   padding: 3px;
   margin-top: 45px;
