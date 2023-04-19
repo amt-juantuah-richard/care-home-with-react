@@ -11,7 +11,7 @@ function Otherpages() {
       const location = window.location.pathname;
       const pathSepereted = location.split("/");
       const locString = pathSepereted[pathSepereted.length - 1];
-      window.document.title = `Jo2Jos | ${locString? locString : ''} | Error`;
+      window.document.title = `Jo2Jos | ${locString? locString : ''}`;
     }, []);
 
   return (
