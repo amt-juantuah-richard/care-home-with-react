@@ -568,11 +568,10 @@ function Navbar() {
             </NavThreeSection>
             <NavFourSection style={{display: `${navFour ? 'flex' : 'none'}`}}>
               <HeadTitle><b>No current news items</b></HeadTitle>
-              <Image src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="logo"/>            
+              <ImageRaw src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="logo"/>            
             </NavFourSection>
             <CloseModal onClick={handleSideNav}/>
             <Image src={image} alt="logo"/>
-            <ImageRaw src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="logo"/>            
           </ModalWrapper>
       </SideModal>
       <Wrapper>
