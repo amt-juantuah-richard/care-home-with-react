@@ -3,14 +3,13 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import ServicesDetail from '../components/ServiceDetail';
-import { useLocation } from 'react-router-dom';
 import { useTitle } from 'react-use';
 
 
 function Otherpages() {
   
-  const location = useLocation();
-  let pathSepereted = location.toString().split("/");
+  const location = window.location.pathname;
+  let pathSepereted = location.split("/");
   const locString = pathSepereted[pathSepereted.length - 1];
   useTitle(`Jo2Jos | ${locString}`);
 
