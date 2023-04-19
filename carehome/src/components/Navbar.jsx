@@ -382,7 +382,16 @@ const Span = styled.span`
   color: steelblue !important;
 `;
 
-const ImageRaw = styled.img``;
+const ImageRaw = styled.img`
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  margin: auto;
+  border-radius: 6px;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
 
 const NavOneSection = styled.div`
   transition: all 500ms;
@@ -392,16 +401,6 @@ const NavOneSection = styled.div`
   overflow: auto;
   height: auto;
   flex-flow: column;
-  & ${ImageRaw} {
-      width: 80%;
-      aspect-ratio: 1 / 1;
-      margin: auto;
-      border-radius: 6px;
-      background-size: contain;
-      background-position: center center;
-      background-repeat: no-repeat;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
 `;
 
 const NavTwoSection = styled(NavOneSection)``;
