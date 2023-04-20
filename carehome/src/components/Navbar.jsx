@@ -138,7 +138,7 @@ const SideModal = styled.div`
   height: 100vh;
   position: fixed;
   top: 0;
-  margin-left: -5vw;
+  margin-left: -8vw;
   display: block;
   z-index: 4;
   background-color: rgb(5 5 5 / 55%);
