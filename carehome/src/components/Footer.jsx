@@ -3,6 +3,7 @@ import { Facebook as Fb, Instagram as Inst, Linkedin as Lin, Twitter as Tw } fro
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { RandomImages } from '../Data';
 import { mobile } from '../responsive';
 
 const Facebook = styled(Fb)`
@@ -232,14 +233,25 @@ const WhitePara = styled.p`
     })}
 `;
 
+const FootImage = styled.img`
+    transform: rotate(350deg);
+    margin: auto;
+    width: 300px;
+    aspect-ratio: 2/1;
+`;
+
 
 
 function Footer() {
+
+    const randomNumber = Math.floor(Math.random() * (RandomImages.length-1))
+    const image = RandomImages[randomNumber];
 
     
   return (
     <>
         <TopWhite>
+            <FootImage src={image} alt="happy people"/>
             <WhiteContain>
                 <WhiteHead>We are Happy to Build a Great Society with you</WhiteHead>
                 <WhitePara>Our Fully Trained and Qualified Staff and Facilities are immediately responsive and available to suport the individual needs of our clients. We are willing to facilitate the possible highest quality of life within Our Service range.</WhitePara>
