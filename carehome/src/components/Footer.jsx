@@ -57,6 +57,7 @@ const TopWhite = styled.div`
     position: relative;
     z-index: 2;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     ${mobile({
