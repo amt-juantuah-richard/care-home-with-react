@@ -235,7 +235,7 @@ const WhitePara = styled.p`
 
 const FootImage = styled.img`
     width: 500px;
-    aspect-ratio: 1.5 / 1;
+    height: auto;
     ${mobile({
         width: "100%",
     })}
@@ -245,7 +245,7 @@ const FootImage = styled.img`
 
 function Footer() {
 
-    const randomNumber = Math.floor(Math.random() * (RandomImages.length-1))
+    const randomNumber = Math.floor(Math.random() * RandomImages.length);
     const image = RandomImages[randomNumber];
 
     
