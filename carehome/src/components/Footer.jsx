@@ -51,7 +51,7 @@ const Container = styled.div`
 
 const TopWhite = styled.div`
     background-color: var(--color-bg);
-    height: 100vh;
+    height: auto;
     width: 100vw;
     border-radius: 0 0 0 150px;
     position: relative;
@@ -62,7 +62,6 @@ const TopWhite = styled.div`
     align-items: center;
     ${mobile({
         borderRadius: '0 0 0 80px',
-        height: "70vh"
     })}
 `;
 
