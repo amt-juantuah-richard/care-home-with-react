@@ -234,10 +234,11 @@ const WhitePara = styled.p`
 `;
 
 const FootImage = styled.img`
-    transform: rotate(350deg);
-    margin: auto;
-    width: 300px;
-    aspect-ratio: 2/1;
+    width: 500px;
+    aspect-ratio: 1.5 / 1;
+    ${mobile({
+        width: "100%",
+    })}
 `;
 
 
