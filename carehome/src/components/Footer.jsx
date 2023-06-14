@@ -289,8 +289,8 @@ function Footer() {
                     <List>
                         <ListHead>Get in touch</ListHead>
                         <ListItem>Email: <a href='mailto:joe@jo2josservice.com'>joe@jo2josservice.com</a> </ListItem>
-                        <ListItem>Tel: <a href='tel:01473316966'>01473316966</a> </ListItem>
-                        <ListItem>Mob: <a href='tel:+447459196375'>447459196375</a> </ListItem>
+                        <ListItem>Tel: <a href='tel:07886960968'>07886960968</a> </ListItem>
+                        <ListItem>Mob: <a href='tel:07710162226'>07710162226</a> </ListItem>
                     </List>
                 </ListWrap>
             </Top>

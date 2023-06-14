@@ -566,14 +566,14 @@ function Navbar() {
               <ContactDetails>
                 <Para><b>Call:</b></Para>
                 <FcPhone style={{height: "30px", width: "30px"}}/>
-                <Para><a href='tel:01473316966'>01473316966</a></Para>
+                <Para><a href='tel:07886960968'>07886960968</a></Para>
               </ContactDetails>
               <HeadTitle><b>To Reach Us on Mobile</b></HeadTitle>
                             
               <ContactDetails>
                 <Para><b>Call:</b></Para>
                 <FcIphone style={{height: "30px", width: "30px"}}/>
-                <Para><a href='tel:01473316966'>01473316966</a></Para>
+                <Para><a href='tel:07710162226'>07710162226</a></Para>
               </ContactDetails>
             </NavTwoSection>
             <NavThreeSection style={{display: `${navThree ? 'flex' : 'none'}`}}>
@@ -599,7 +599,7 @@ function Navbar() {
             </Link>
             <LogoDown>
               <Phone />
-              <Tel href='tel:01473316966'>01473316966</Tel>
+              <Tel href='tel:07710162226'>07710162226</Tel>
             </LogoDown>
           </LogoContain>
           <SideNavOpener>
