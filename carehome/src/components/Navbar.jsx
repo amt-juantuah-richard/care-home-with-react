@@ -287,8 +287,9 @@ const SideNavOpener = styled.div`
       fontWeight: "600",
       fontSize: "11px",
       // width: "80px",
-      textAlign: "center",
-      gap: "0px"
+      textAlign: "start",
+      gap: "0px",
+      width: "85px",
       // padding: "5px",
       // borderRadius: "2px",
     })}
