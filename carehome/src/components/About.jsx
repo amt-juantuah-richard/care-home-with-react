@@ -14,6 +14,7 @@ const Container = styled.div`
 
 const HeadTitle = styled.h2`
     margin-bottom: 30px;
+    margin-top: 50px;
     padding-left: 10px;
     border-left: 5px solid var(--color-orange);
     font-size: 30px;
@@ -30,6 +31,7 @@ const Para = styled.p`
 
 const UList = styled.ul`
     margin: 15px;
+    margin-top: 40px;
 `;
 
 const List = styled.li`

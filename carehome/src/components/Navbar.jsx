@@ -104,7 +104,9 @@ const MenuDropItem = styled.li`
   }
 `;
 
-const Para = styled.span``;
+const Para = styled.span`
+  
+`;
 
 const MenuItem = styled.div`
   width: 96px;
@@ -283,6 +285,10 @@ const SideNavOpener = styled.div`
     ${mobile({
       fontSize: "11px",
       fontWeight: "600",
+      fontSize: "11px",
+      fontWeight: "600",
+      width: "80px",
+      textAlign: "center",
       // padding: "5px",
       // borderRadius: "2px",
     })}
