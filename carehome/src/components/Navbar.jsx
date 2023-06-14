@@ -286,8 +286,7 @@ const SideNavOpener = styled.div`
       fontSize: "11px",
       fontWeight: "600",
       fontSize: "11px",
-      fontWeight: "600",
-      width: "80px",
+      // width: "80px",
       textAlign: "center",
       gap: "0px"
       // padding: "5px",
@@ -296,6 +295,7 @@ const SideNavOpener = styled.div`
   };
   ${mobile({
     marginLeft: "5px",
+    gap: "0px"
   })}
 `;
 
