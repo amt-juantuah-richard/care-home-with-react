@@ -266,10 +266,10 @@ function Footer() {
                         <Number href='tel:01473316966'>01473316966</Number>
                     </MainContact>
                     <Socials>
-                        <a href='www.facebook.com/jo2jos'><Facebook color='plain' size='large'/></a> 
-                        <a href='www.twitter.com/jo2jos'><Twitter color='plain' size='large'/></a>
-                        <a href='www.instagram.com/jo2jos'><Instagram color='plain' size='large'/></a>
-                        <a href='www.linkedin.com/jo2jos'><Linkedin color='plain' size='large'/></a>
+                        <a href='https://www.facebook.com/jo2jos'><Facebook color='plain' size='large'/></a> 
+                        <a href='https://www.twitter.com/jo2jos'><Twitter color='plain' size='large'/></a>
+                        <a href='https://www.instagram.com/jo2jos'><Instagram color='plain' size='large'/></a>
+                        <a href='https://www.linkedin.com/jo2jos'><Linkedin color='plain' size='large'/></a>
                     </Socials>
                 </Contact>
                 <ListWrap>
@@ -298,7 +298,7 @@ function Footer() {
                 <BigLetter>JO2JOS</BigLetter>
             </Bottom>
         </Container>
-        <Copyright><Para>Copyright © 2023 - 2025 by <b style={{color: "gold"}}>OJ & Bridge Code House</b>, all rights reserved.<br/>Kumasi - Ghana</Para></Copyright>
+        <Copyright><Para>Copyright © 2023 - 2025 by <b style={{color: "gold"}}>OJ & Bridge Code House</b>, all rights reserved.<br/>London - UK</Para></Copyright>
     </>
   )
 }

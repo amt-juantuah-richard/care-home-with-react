@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import { NavigationBarData } from '../Data';
 import { mobile } from '../responsive';
 import image from '../assets/hart.avif'
+import { RxDropdownMenu } from "react-icons/rx";
 
 // const Layer = styled(Lay)`
 //   ${mobile({
@@ -256,32 +257,34 @@ const LogoContain = styled.div`
 
 const SideNavOpener = styled.div`
   border-radius: 4px;
-  border: 2px solid gold;
+  // border: 2px solid gold;
   margin-left: 15px;
   display: flex;
   flex-flow: row;
   align-items: center;
   justify-content: center;
-  gap: 0.5px;
+  gap: 10px;
   height: fit-content;
   padding: 3px;
   margin-top: 45px;
   & span {
     font-size: 13px;
     cursor: pointer;
-    font-weight: 600;
-    color: var(--color-bg);
-    border-bottom: 2px solid gold;
+    // font-weight: 600;
+    // color: var(--color-bg);
+    // border-bottom: 2px solid gold;
     padding: 10px;
-    background-color: var(--color-purple);
+    // background-color: var(--color-purple);
     border-radius: 4px;
     &:hover {
       color: gold;
+      border-bottom: 1px solid;
     };
     ${mobile({
       fontSize: "11px",
-      padding: "5px",
-      borderRadius: "2px",
+      fontWeight: "600",
+      // padding: "5px",
+      // borderRadius: "2px",
     })}
   };
   ${mobile({
@@ -321,10 +324,13 @@ const MobileMenu = styled.div`
   justify-self: right;
   align-self: center;
   position: relative;
+  & svg {
+    cursor: pointer;
+  }
   &:hover {
-    background-color: var(--color-purple);
+    // background-color: var(--color-purple);
     & svg {
-      color: var(--color-bg);
+      // color: var(--color-bg);
     }
   };
 `;
@@ -396,7 +402,7 @@ const ImageRaw = styled.img`
 const NavOneSection = styled.div`
   transition: all 500ms;
   margin-top: 20px;
-  padding-left: 10%;
+  padding-left: 15%;
   padding-bottom: 10%;
   overflow: auto;
   height: auto;
@@ -615,7 +621,7 @@ function Navbar() {
         </Right>
         <MobileMenu >
           {
-            menuIcon === 'close' ? <AppsRounded onClick={() => (setMenuIcon(menuIcon === 'close' ? 'open' : 'close'))} size='large'/> :
+            menuIcon === 'close' ? <RxDropdownMenu style={{width: "45px", height: "45px"}} onClick={() => (setMenuIcon(menuIcon === 'close' ? 'open' : 'close'))} /> :
           <Close onClick={() => (setMenuIcon(menuIcon === 'close' ? 'open' : 'close'))} size='large'/>}
           <MobileMenuSection style={{display: `${menuIcon === 'close' ? 'none' : 'flex'}`}}>
             {NavigationBarData.map((item, index)=> (

@@ -76,11 +76,11 @@ export const NavigationBarData = [
                 name: "Allocated 1 on 1 (face to face) Interventions",
                 path: "/services/face-to-face-interventions"
             },
-            {
-                id: 7,
-                name: "positive behaviour support (PBS)",
-                path: "/services/positive-behaviour-support"
-            }
+            // {
+            //     id: 7,
+            //     name: "positive behaviour support (PBS)",
+            //     path: "/services/positive-behaviour-support"
+            // }
         ]
     },
     {
@@ -166,7 +166,7 @@ export const ServicesData = [
         id: 1,
         title: "Housing Support",
         path: "/services/housing-support",
-        image: 'https://images.unsplash.com/photo-1594841359067-31caf8216011?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        image: 'https://images.unsplash.com/photo-1472224371017-08207f84aaae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
         about: 'We bridge the gap between childhood and adulthood so that a young person is prepared for the challenges of living independently.',
         all: ['Our high quality housing support offer local authority social work teams a safe and immediate solution when seeking to accommodate young people whose personal circumstances or behaviour patterns might make it difficult for them to source and identify a suitable placement', 'At Jo2Jos, we provide safe, comfortable homes for homeless teenagers and asylum-seeking children, where they can learn the essential life skills they will need when they transition to independent living', 'Our staff will always support young people to work towards their goals and build their confidence for the future with personalized, requested and group advice and support to help them on their journey to independence' ],
         otherheadings: [
@@ -181,7 +181,7 @@ export const ServicesData = [
         id: 2,
         title: "Creative Expression Program (CEP)",
         path: "/services/creative-expression",
-        image: 'https://images.unsplash.com/photo-1525336778665-96f9a12c5c4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
+        image: 'https://images.unsplash.com/photo-1526270524890-379ff8cec5d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
         about: 'We use arts to engage, inspire, and connect people to themselves and others in a way that maximizes self awareness and joy',
         all: ['At Jo2Jos, we use our CEP to raise public awareness of the negative physical and mental health consequences of loneliness, which burdens a wide range of living conditions and circumstances.', 'We make use of Dance, Music, Visual Art, Spoken and Unspoken Words', 'Our beneficiaries have loved the CEP, and keep encouraging us to expand the program'],
         otherheadings: [
@@ -206,7 +206,7 @@ export const ServicesData = [
         id: 3,
         title: "Drug & Alcohol Service",
         path: "/services/drug-alcohol-service",
-        image: 'https://images.unsplash.com/photo-1523885460099-30c3afdf5114?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
+        image: 'https://images.unsplash.com/photo-1539541417736-3d44c90da315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80',
         about: 'We provide abstinence-based recovery services, as well as medicine-assisted recovery programmes, such as detoxification or stabilisation services',
         all: ['We have residential treatment options that are provided by a skilled and dedicated workforce who are passionate about providing excellent and effective services', 'Our treatment plans may include but not limited to counselling, withdrawal, rehabilitation and pharmacotherapy', 'If you think you or a loved one may have a problem with alcohol or other drugs, we have professional staff who can help, and we appreciate and highly respect your/their confidentiality'],
         otherheadings: [
@@ -221,7 +221,7 @@ export const ServicesData = [
         id: 4,
         title: "Counselling Services",
         path: "/services/counselling-services",
-        image: 'https://images.unsplash.com/photo-1525336778665-96f9a12c5c4f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
+        image: 'https://images.unsplash.com/photo-1573495804664-b1c0849525af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80',
         about: 'Talk to a professional psychologist or therapist that you can trust. We can help you to learn coping skills, feel happier, achieve important goals, do better in school, or improve relationships',
         all: ['We provide direct special care counselling services', 'All client files are confidential and maintained according to strict professional guidelines'],
         otherheadings: [
@@ -265,21 +265,21 @@ export const ServicesData = [
             }
         ]
     },
-    {
-        id: 7,
-        title: "Positive Behaviour Support (PBS)",
-        path: "/services/positive-behaviour-support",
-        image: 'https://images.unsplash.com/photo-1542623173215-4fe2adeec903?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-        about: 'Our PBI services are individually designed and provided in situations where a significant maladaptive behavior occurs',
-        all: ["Such significant behavioral difficulties can jeopardize a young person's ability to remain in their community of choice due to inappropriate responses to events in the environment.", "The primary focus for this service is to decrease the intensity and/or frequency of the targeted behaviors and to teach safer or more socially appropriate behaviors."],
-        otherheadings: [
-            {
-                title: 'Some of Our PBS services',
-                about: "The services are not limited to the following only, but we consider these as very important for young ones, parents, and guardians to note",
-                dots: ["A comprehensive assessment of the individual's behavior (in the context of their medical diagnosis and disease progression as determined by the appropriate health or mental health professional), skills and abilities, existing and potential natural and paid supports and the environment", "The development and implementation of a holistic structured behavioral treatment plan including specific realistic goals", "The training of family, natural supports and other providers so they can effectively use the basic principles of the behavioral plan", "Regular reassessments of the effectiveness of the behavioral treatment plan, making adjustments to the plan as needed", "Implementation of an emergency intervention plan when there is the possibility of the young person becoming a threat to him or herself or others"]
-            }
-        ]
-    }
+    // {
+    //     id: 7,
+    //     title: "Positive Behaviour Support (PBS)",
+    //     path: "/services/positive-behaviour-support",
+    //     image: 'https://images.unsplash.com/photo-1542623173215-4fe2adeec903?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+    //     about: 'Our PBI services are individually designed and provided in situations where a significant maladaptive behavior occurs',
+    //     all: ["Such significant behavioral difficulties can jeopardize a young person's ability to remain in their community of choice due to inappropriate responses to events in the environment.", "The primary focus for this service is to decrease the intensity and/or frequency of the targeted behaviors and to teach safer or more socially appropriate behaviors."],
+    //     otherheadings: [
+    //         {
+    //             title: 'Some of Our PBS services',
+    //             about: "The services are not limited to the following only, but we consider these as very important for young ones, parents, and guardians to note",
+    //             dots: ["A comprehensive assessment of the individual's behavior (in the context of their medical diagnosis and disease progression as determined by the appropriate health or mental health professional), skills and abilities, existing and potential natural and paid supports and the environment", "The development and implementation of a holistic structured behavioral treatment plan including specific realistic goals", "The training of family, natural supports and other providers so they can effectively use the basic principles of the behavioral plan", "Regular reassessments of the effectiveness of the behavioral treatment plan, making adjustments to the plan as needed", "Implementation of an emergency intervention plan when there is the possibility of the young person becoming a threat to him or herself or others"]
+    //         }
+    //     ]
+    // }
 ]
 
 export const WhyUs = [

@@ -16,6 +16,7 @@ const HeadTitle = styled.h2`
     margin-bottom: 30px;
     padding-left: 10px;
     border-left: 5px solid var(--color-orange);
+    font-size: 30px;
 `;
 
 const Para = styled.p`
@@ -40,8 +41,8 @@ const List = styled.li`
 function About() {
   return (
     <Container>
-        <HeadTitle>Who We Are</HeadTitle>
-        <Para>We are a Semi-Supported Independent Living Service Provider. </Para>
+        <HeadTitle>We Are</HeadTitle>
+        <Para> a Semi-Supported Independent Living Service Provider. </Para>
         <Para>At <b>Jo2jos</b>, we support young people in ways that help them achieve personally desired outcomes and assist them to direct their own lives in a meaningful way. </Para>
         <Para>Our services are designed to support young people on their pathways to independence. All support is tailored to each person’s individual needs, through structured care and support plan,</Para>
         <UList>

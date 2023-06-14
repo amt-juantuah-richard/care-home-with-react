@@ -19,7 +19,7 @@ function Homepage() {
   return (
     <Container>
       <Navbar />
-      <Banner />
+      {/* <Banner /> */}
       <About />
       <Services />
       <Why />
