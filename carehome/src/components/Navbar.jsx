@@ -595,7 +595,7 @@ function Navbar() {
             </LogoDown>
           </LogoContain>
           <SideNavOpener>
-            <Para onClick={() => {handleSideNav(); handleNavOne()}}>About</Para>
+            <Para onClick={() => {handleSideNav(); handleNavOne()}}>About Us</Para>
             <Para onClick={() => {handleSideNav(); handleNavTwo()}}>Contact</Para>
           </SideNavOpener>
         </Left>
