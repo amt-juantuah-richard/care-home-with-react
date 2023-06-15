@@ -56,23 +56,23 @@ export const NavigationBarData = [
                 name: "Creative Expression Program",
                 path: "/services/creative-expression"
             },
+            // {
+            //     id: 3,
+            //     name: "Drug & Alcohol Service",
+            //     path: "/services/drug-alcohol-service"
+            // },
             {
                 id: 3,
-                name: "Drug & Alcohol Service",
-                path: "/services/drug-alcohol-service"
-            },
-            {
-                id: 4,
                 name: "Counselling Services",
                 path: "/services/counselling-services"
             },
             {
-                id: 5,
+                id: 4,
                 name: "Educational & Employment Support",
                 path: "/services/educational-employment-support"
             },
             {
-                id: 6,
+                id: 5,
                 name: "Allocated 1 on 1 (face to face) Interventions",
                 path: "/services/face-to-face-interventions"
             },
@@ -202,23 +202,23 @@ export const ServicesData = [
             }
         ]
     },
+    // {
+    //     id: 3,
+    //     title: "Drug & Alcohol Service",
+    //     path: "/services/drug-alcohol-service",
+    //     image: 'https://images.unsplash.com/photo-1539541417736-3d44c90da315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80',
+    //     about: 'We provide abstinence-based recovery services, as well as medicine-assisted recovery programmes, such as detoxification or stabilisation services',
+    //     all: ['We have residential treatment options that are provided by a skilled and dedicated workforce who are passionate about providing excellent and effective services', 'Our treatment plans may include but not limited to counselling, withdrawal, rehabilitation and pharmacotherapy', 'If you think you or a loved one may have a problem with alcohol or other drugs, we have professional staff who can help, and we appreciate and highly respect your/their confidentiality'],
+    //     otherheadings: [
+    //         {
+    //             title: 'Take a bold and responsible step with Alcohol and drug problems',
+    //             about: 'We know that alcohol and drug use can easily escalate beyond an individual\'s intentions and control. That is why it is important to table a bold step when things get messy. As you might be aware, that obviously represents your acknowledgement of your self reespect or that of a loved one. We do not want things to end where we might say "it is sad!"',
+    //             dots: ['We provide counselling', 'We support in dealing with the impact of drug use on the family','We offer you a pool of healthcare professionals', 'We have referral and advisory support', 'We provide assistance in developing strategies to deal with alcohol or drug problems', 'We provide information about how to reduce the harm associated with drug use', 'We provide intensive home-based withdrawal programs', 'We provide peer support', 'We provide family, parent, or sibling drug support']
+    //         }
+    //     ]
+    // },
     {
         id: 3,
-        title: "Drug & Alcohol Service",
-        path: "/services/drug-alcohol-service",
-        image: 'https://images.unsplash.com/photo-1539541417736-3d44c90da315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80',
-        about: 'We provide abstinence-based recovery services, as well as medicine-assisted recovery programmes, such as detoxification or stabilisation services',
-        all: ['We have residential treatment options that are provided by a skilled and dedicated workforce who are passionate about providing excellent and effective services', 'Our treatment plans may include but not limited to counselling, withdrawal, rehabilitation and pharmacotherapy', 'If you think you or a loved one may have a problem with alcohol or other drugs, we have professional staff who can help, and we appreciate and highly respect your/their confidentiality'],
-        otherheadings: [
-            {
-                title: 'Take a bold and responsible step with Alcohol and drug problems',
-                about: 'We know that alcohol and drug use can easily escalate beyond an individual\'s intentions and control. That is why it is important to table a bold step when things get messy. As you might be aware, that obviously represents your acknowledgement of your self reespect or that of a loved one. We do not want things to end where we might say "it is sad!"',
-                dots: ['We provide counselling', 'We support in dealing with the impact of drug use on the family','We offer you a pool of healthcare professionals', 'We have referral and advisory support', 'We provide assistance in developing strategies to deal with alcohol or drug problems', 'We provide information about how to reduce the harm associated with drug use', 'We provide intensive home-based withdrawal programs', 'We provide peer support', 'We provide family, parent, or sibling drug support']
-            }
-        ]
-    },
-    {
-        id: 4,
         title: "Counselling Services",
         path: "/services/counselling-services",
         image: 'https://images.unsplash.com/photo-1573495804664-b1c0849525af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80',
@@ -233,7 +233,7 @@ export const ServicesData = [
         ]
     },
     {
-        id: 5,
+        id: 4,
         title: "Educational & Employment Support",
         path: "/services/educational-employment-support",
         image: 'https://images.unsplash.com/photo-1596495717678-69df9f89c2a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
@@ -251,7 +251,7 @@ export const ServicesData = [
 
     },
     {
-        id: 6,
+        id: 5,
         title: "Allocated 1 on 1 (face to face) Interventions",
         path: "/services/face-to-face-interventions",
         image: 'https://media.istockphoto.com/id/1463773444/photo/excited-boy-talking-to-psychologist.jpg?b=1&s=170667a&w=0&k=20&c=rULm3OMvzuslkGJQjR87SS3io3_IZ5ZhqR4UVuVNq0Q=',
