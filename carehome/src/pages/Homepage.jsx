@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import Banner from '../components/Banner';
+// import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Services from '../components/Services';
@@ -15,9 +15,14 @@ const Container = styled.div`
 function Homepage() {
 
   useTitle('Jo2Jos | Home')
+
+  useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
   
   return (
-    <Container>
+    <Container >
+      <p id="i"></p>
       <Navbar />
       {/* <Banner /> */}
       <About />

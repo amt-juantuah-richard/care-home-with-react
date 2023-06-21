@@ -5,7 +5,6 @@ import { mobile } from '../responsive';
 import { ServicesData } from '../Data';
 import { Services } from 'grommet-icons';
 import { ArrowDownwardRounded } from '@mui/icons-material';
-import CircularProgress from '@mui/material/CircularProgress';
 
 
 const Container = styled.div`
@@ -16,16 +15,6 @@ const Container = styled.div`
         padding: "50px 25px"
     })}
 `;
-
-// const Spinner = styled.CircularProgress`
-//     width: 40px;
-//     height: 40px;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     z-index: 2;
-//     color: gold;
-// `;
 
 const HeadSection = styled.div`
     height: 140px;
@@ -281,18 +270,8 @@ const ListItem = styled.li`
 function ServicesDetail() {
     const location = useLocation();
     const [others, setOthers] = useState(false);
-    const [loader, setLoader] = useState(false);
     const itemID = location.state.itemID;    
 
-    // const itemHere = location.pathname.split("/")[1];
-
-    useEffect(() => {
-        setLoader(true);
-        setTimeout(()=>{
-            setLoader(false)
-        }, 1000)
-
-    }, [])
 
     const handleOthers = () => {
         setOthers(others === false ? true : false);
@@ -300,8 +279,6 @@ function ServicesDetail() {
 
   return (
     <Container>
-        {loader && <CircularProgress style={{position: "absolute", top: "50%", left: "50%", zIndex: "2", color: "gold"}} />}
-
         {
         parseInt(itemID) >= 0 ?
         <>

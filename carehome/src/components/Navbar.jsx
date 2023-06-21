@@ -422,7 +422,7 @@ const NavThreeSection = styled(NavOneSection)``;
 const NavFourSection = styled(NavOneSection)``;
 
 const HeadTitle = styled.h3`
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border-left: 5px solid var(--color-orange);
     padding-left: 15px;
 `;
@@ -441,8 +441,8 @@ const ContactDetails = styled.div`
   flex-flow: row;
   align-items: center;
   gap: 5px;
-  margin-bottom: 15px;
-  margin-up: -5px;
+  margin-bottom: 50px;
+  margin-top: -5px;
   & a {
     color: var(--color-purple);
     transition: all 300ms;
