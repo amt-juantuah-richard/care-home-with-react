@@ -19,7 +19,8 @@ const Main = styled.div`
     padding:20px 0;
     display: flex;
     flex-flow: wrap row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
     gap: 80px;
     margin-top: 50px;
     ${mobile({
